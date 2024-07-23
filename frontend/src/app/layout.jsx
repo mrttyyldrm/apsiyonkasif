@@ -1,6 +1,7 @@
 import "@/styles/base.scss";
 import Head from "next/head";
 import Script from "next/script";
+import { Plus_Jakarta_Sans } from "next/font/google";
 
 export const metadata = {
   title: "Ana Sayfa | Apsiyon Kaşif",

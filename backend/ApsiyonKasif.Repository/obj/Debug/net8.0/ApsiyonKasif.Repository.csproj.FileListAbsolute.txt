@@ -1,0 +1,17 @@
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Repository\bin\Debug\net8.0\ApsiyonKasif.Repository.deps.json
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Repository\bin\Debug\net8.0\ApsiyonKasif.Repository.runtimeconfig.json
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Repository\bin\Debug\net8.0\ApsiyonKasif.Repository.dll
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Repository\bin\Debug\net8.0\ApsiyonKasif.Repository.pdb
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Repository\bin\Debug\net8.0\ApsiyonKasif.Core.dll
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Repository\bin\Debug\net8.0\ApsiyonKasif.Core.pdb
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Repository\obj\Debug\net8.0\ApsiyonKasif.Repository.csproj.AssemblyReference.cache
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Repository\obj\Debug\net8.0\ApsiyonKasif.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Repository\obj\Debug\net8.0\ApsiyonKasif.Repository.AssemblyInfoInputs.cache
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Repository\obj\Debug\net8.0\ApsiyonKasif.Repository.AssemblyInfo.cs
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Repository\obj\Debug\net8.0\ApsiyonKasif.Repository.csproj.CoreCompileInputs.cache
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Repository\obj\Debug\net8.0\ApsiyonK.46940CD9.Up2Date
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Repository\obj\Debug\net8.0\ApsiyonKasif.Repository.dll
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Repository\obj\Debug\net8.0\refint\ApsiyonKasif.Repository.dll
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Repository\obj\Debug\net8.0\ApsiyonKasif.Repository.pdb
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Repository\obj\Debug\net8.0\ApsiyonKasif.Repository.genruntimeconfig.cache
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Repository\obj\Debug\net8.0\ref\ApsiyonKasif.Repository.dll

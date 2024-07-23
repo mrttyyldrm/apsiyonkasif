@@ -1,0 +1,17 @@
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Service\bin\Debug\net8.0\ApsiyonKasif.Service.deps.json
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Service\bin\Debug\net8.0\ApsiyonKasif.Service.dll
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Service\bin\Debug\net8.0\ApsiyonKasif.Service.pdb
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Service\bin\Debug\net8.0\ApsiyonKasif.Core.dll
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Service\bin\Debug\net8.0\ApsiyonKasif.Repository.dll
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Service\bin\Debug\net8.0\ApsiyonKasif.Repository.pdb
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Service\bin\Debug\net8.0\ApsiyonKasif.Core.pdb
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Service\obj\Debug\net8.0\ApsiyonKasif.Service.csproj.AssemblyReference.cache
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Service\obj\Debug\net8.0\ApsiyonKasif.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Service\obj\Debug\net8.0\ApsiyonKasif.Service.AssemblyInfoInputs.cache
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Service\obj\Debug\net8.0\ApsiyonKasif.Service.AssemblyInfo.cs
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Service\obj\Debug\net8.0\ApsiyonKasif.Service.csproj.CoreCompileInputs.cache
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Service\obj\Debug\net8.0\ApsiyonK.EA1212B1.Up2Date
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Service\obj\Debug\net8.0\ApsiyonKasif.Service.dll
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Service\obj\Debug\net8.0\refint\ApsiyonKasif.Service.dll
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Service\obj\Debug\net8.0\ApsiyonKasif.Service.pdb
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Service\obj\Debug\net8.0\ref\ApsiyonKasif.Service.dll

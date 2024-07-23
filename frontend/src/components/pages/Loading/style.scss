@@ -1,0 +1,46 @@
+@import "@/styles/color.scss";
+
+/*#region Loading Codes*/
+
+main {
+    section#loading {
+        background-color: $primary;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        #loading-logo {
+            img {
+                width: 13.5rem;
+                height: 13.5rem;
+                animation: scale 1.5s infinite;
+
+                @keyframes scale {
+                    0% {
+                        transform: scale(1.0);
+                    }
+
+                    50% {
+                        transform: scale(1.1);
+                    }
+
+                    100% {
+                        transform: scale(1.0);
+                    }
+                }
+            }
+        }
+
+        h3 {
+            max-width: 20rem;
+            font-size: 2.3rem;
+            font-weight: 700;
+            color: $white;
+            text-align: center;
+        }
+    }
+}
+
+/*#endregion*/

@@ -1,0 +1,89 @@
+@import "@/styles/color.scss";
+@import "@/styles/components/text";
+@import "@/styles/components/button";
+
+main {
+    section#welcome {
+        padding: 0;
+        display: grid;
+        grid-template-rows: 1fr 20rem;
+
+        #welcome-content {
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+
+            #welcome-logo {
+                width: 15rem;
+                height: 15rem;
+                border-radius: 50%;
+                background-color: $primary;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 10rem;
+                    height: 10rem;
+                }
+            }
+
+            #welcome-title {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.8rem;
+
+                h1 {
+                    font-size: 3.2rem;
+                    font-weight: 900;
+                }
+
+                p {
+                    @extend %text;
+                    text-align: center;
+                }
+            }
+        }
+
+        #welcome-button {
+            position: relative;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 160%;
+                height: 100%;
+                background-color: $primary;
+                border-radius: 50% 50% 0 0;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 2rem;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 12rem;
+                height: 2.2rem;
+                border-radius: 50%;
+                background-color: $primaryDark;
+            }
+
+            a {
+                z-index: 1;
+                @extend %button;
+            }
+        }
+    }
+}

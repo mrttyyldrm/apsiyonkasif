@@ -11,10 +11,10 @@ namespace ApsiyonKasif.Core.Entities
     {
         public int Id { get; set; }
         public string Name { get; set; }
-
+        [JsonIgnore]
         public int CityId { get; set; }
 
-        [JsonIgnore]
+        
         public City City { get; set; }
 
         [JsonIgnore]

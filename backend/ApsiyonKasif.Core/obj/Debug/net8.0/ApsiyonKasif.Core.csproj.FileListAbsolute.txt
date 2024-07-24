@@ -10,3 +10,16 @@ C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Core\obj\Debug\net8.0\A
 C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Core\obj\Debug\net8.0\refint\ApsiyonKasif.Core.dll
 C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Core\obj\Debug\net8.0\ApsiyonKasif.Core.pdb
 C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Core\obj\Debug\net8.0\ref\ApsiyonKasif.Core.dll
+C:\Users\merts\Masaüstü\apsiyonkasif\backend\ApsiyonKasif.Core\bin\Debug\net8.0\ApsiyonKasif.Core.deps.json
+C:\Users\merts\Masaüstü\apsiyonkasif\backend\ApsiyonKasif.Core\bin\Debug\net8.0\ApsiyonKasif.Core.dll
+C:\Users\merts\Masaüstü\apsiyonkasif\backend\ApsiyonKasif.Core\bin\Debug\net8.0\ApsiyonKasif.Core.pdb
+C:\Users\merts\Masaüstü\apsiyonkasif\backend\ApsiyonKasif.Core\obj\Debug\net8.0\ApsiyonKasif.Core.csproj.AssemblyReference.cache
+C:\Users\merts\Masaüstü\apsiyonkasif\backend\ApsiyonKasif.Core\obj\Debug\net8.0\ApsiyonKasif.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\merts\Masaüstü\apsiyonkasif\backend\ApsiyonKasif.Core\obj\Debug\net8.0\ApsiyonKasif.Core.AssemblyInfoInputs.cache
+C:\Users\merts\Masaüstü\apsiyonkasif\backend\ApsiyonKasif.Core\obj\Debug\net8.0\ApsiyonKasif.Core.AssemblyInfo.cs
+C:\Users\merts\Masaüstü\apsiyonkasif\backend\ApsiyonKasif.Core\obj\Debug\net8.0\ApsiyonKasif.Core.csproj.CoreCompileInputs.cache
+C:\Users\merts\Masaüstü\apsiyonkasif\backend\ApsiyonKasif.Core\obj\Debug\net8.0\ApsiyonKasif.Core.sourcelink.json
+C:\Users\merts\Masaüstü\apsiyonkasif\backend\ApsiyonKasif.Core\obj\Debug\net8.0\ApsiyonKasif.Core.dll
+C:\Users\merts\Masaüstü\apsiyonkasif\backend\ApsiyonKasif.Core\obj\Debug\net8.0\refint\ApsiyonKasif.Core.dll
+C:\Users\merts\Masaüstü\apsiyonkasif\backend\ApsiyonKasif.Core\obj\Debug\net8.0\ApsiyonKasif.Core.pdb
+C:\Users\merts\Masaüstü\apsiyonkasif\backend\ApsiyonKasif.Core\obj\Debug\net8.0\ref\ApsiyonKasif.Core.dll

@@ -4298,19 +4298,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sekii\\.nuget\\packages\\": {}
+    "C:\\Users\\merts\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sekii\\OneDrive\\Masaüstü\\apsiyonkasif\\backend\\ApsiyonKasif.Repository\\ApsiyonKasif.Repository.csproj",
+      "projectUniqueName": "C:\\Users\\merts\\Masaüstü\\apsiyonkasif\\backend\\ApsiyonKasif.Repository\\ApsiyonKasif.Repository.csproj",
       "projectName": "ApsiyonKasif.Repository",
-      "projectPath": "C:\\Users\\sekii\\OneDrive\\Masaüstü\\apsiyonkasif\\backend\\ApsiyonKasif.Repository\\ApsiyonKasif.Repository.csproj",
-      "packagesPath": "C:\\Users\\sekii\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sekii\\OneDrive\\Masaüstü\\apsiyonkasif\\backend\\ApsiyonKasif.Repository\\obj\\",
+      "projectPath": "C:\\Users\\merts\\Masaüstü\\apsiyonkasif\\backend\\ApsiyonKasif.Repository\\ApsiyonKasif.Repository.csproj",
+      "packagesPath": "C:\\Users\\merts\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\merts\\Masaüstü\\apsiyonkasif\\backend\\ApsiyonKasif.Repository\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\sekii\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\merts\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4325,8 +4325,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\sekii\\OneDrive\\Masaüstü\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj": {
-              "projectPath": "C:\\Users\\sekii\\OneDrive\\Masaüstü\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj"
+            "C:\\Users\\merts\\Masaüstü\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj": {
+              "projectPath": "C:\\Users\\merts\\Masaüstü\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj"
             }
           }
         }

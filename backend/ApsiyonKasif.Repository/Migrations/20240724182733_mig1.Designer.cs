@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ApsiyonKasif.Repository.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240724123026_initial")]
-    partial class initial
+    [Migration("20240724182733_mig1")]
+    partial class mig1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -35,6 +35,9 @@ namespace ApsiyonKasif.Repository.Migrations
 
                     b.Property<int>("AdvertTypeId")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -353,6 +356,9 @@ namespace ApsiyonKasif.Repository.Migrations
                     b.Property<int>("ApartmentId")
                         .HasColumnType("int");
 
+                    b.Property<int>("BathroomCount")
+                        .HasColumnType("int");
+
                     b.Property<string>("Direction")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -470,6 +476,7 @@ namespace ApsiyonKasif.Repository.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("AppUserId1")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<decimal>("Price")
@@ -511,6 +518,7 @@ namespace ApsiyonKasif.Repository.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("AppUserId1")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("HomeId")
@@ -797,7 +805,9 @@ namespace ApsiyonKasif.Repository.Migrations
                 {
                     b.HasOne("ApsiyonKasif.Core.Entities.AppUser", "AppUser")
                         .WithMany()
-                        .HasForeignKey("AppUserId1");
+                        .HasForeignKey("AppUserId1")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("AppUser");
                 });
@@ -806,7 +816,9 @@ namespace ApsiyonKasif.Repository.Migrations
                 {
                     b.HasOne("ApsiyonKasif.Core.Entities.AppUser", "AppUser")
                         .WithMany()
-                        .HasForeignKey("AppUserId1");
+                        .HasForeignKey("AppUserId1")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("ApsiyonKasif.Core.Entities.Home", "Home")
                         .WithMany()

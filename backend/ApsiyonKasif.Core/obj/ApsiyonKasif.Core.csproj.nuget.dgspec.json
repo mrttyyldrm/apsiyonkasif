@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sekii\\OneDrive\\Masaüstü\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj": {}
+    "C:\\Users\\merts\\Masaüstü\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sekii\\OneDrive\\Masaüstü\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj": {
+    "C:\\Users\\merts\\Masaüstü\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sekii\\OneDrive\\Masaüstü\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj",
+        "projectUniqueName": "C:\\Users\\merts\\Masaüstü\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj",
         "projectName": "ApsiyonKasif.Core",
-        "projectPath": "C:\\Users\\sekii\\OneDrive\\Masaüstü\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj",
-        "packagesPath": "C:\\Users\\sekii\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sekii\\OneDrive\\Masaüstü\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\obj\\",
+        "projectPath": "C:\\Users\\merts\\Masaüstü\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj",
+        "packagesPath": "C:\\Users\\merts\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\merts\\Masaüstü\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sekii\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\merts\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -25,6 +25,7 @@ builder.Services.AddSwaggerGen();
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
 builder.Host.ConfigureContainer<ContainerBuilder>(x => x.RegisterModule(new RepoServiceModule()));
 builder.Services.AddScoped<IAdvertService, AdvertService>();
+builder.Services.AddScoped<IDistrictService, DistrictService>();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 {

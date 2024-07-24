@@ -27,17 +27,17 @@ namespace ApsiyonKasif.Core.Entities
 
         public int DistrictId { get; set; }
 
-        [JsonIgnore]
+        //[JsonIgnore]
         public District District { get; set; }
 
         public int? BuildingComplexId { get; set; }
 
-        [JsonIgnore]
+        //[JsonIgnore]
         public BuildingComplex BuildingComplex { get; set; }    
 
         public int HeatingTypeId { get; set; }
 
-        [JsonIgnore]
+        //[JsonIgnore]
         public HeatingType HeatingType { get; set; }
 
         [JsonIgnore]

@@ -18,41 +18,28 @@ namespace ApsiyonKasif.Repository.Repositories
         public AdvertRepository(AppDbContext context) : base(context)
         {
         }
-
-        //public async Task<List<Advert>> AdvertFilter(AdvertFilterDto filter)
-        //{
-        //    var query = _context.Adverts
-        //       .Include(x => x.AdvertType)
-        //       .Include(x => x.Home)
-        //       .AsQueryable();
-
-        //    List<object> filters = [filter.MaxPrice, filter.MinPrice, filter.MaxApartmentAge, filter.MinApartmentAge, filter.Dues, filter.RoomCountId, filter.Floor, filter.MinNetArea, filter.MaxNetArea, filter.HasFurnished, filter.HeatingTypeId];
-
-        //    List<object> notNullFilters = new List<object>();
-
-        //    for (int i = 0; i < filters.Count; i++)
-        //    {
-        //        if (filters[i] != null)
-        //        {
-        //            notNullFilters.Add(filters[i]);
-        //        }
-        //    }
-
-        //    filters.Clear();
-        //    filters.AddRange(notNullFilters);
-
-        //    if (!filters.Contains(filter))
-        //    {
-        //        return await query
-        //            .Where(x => x.Price < filter.MaxPrice)
-        //            .ToListAsync();
-        //    }
-
-        //    return await _context.Adverts
-        //       .Include(x => x.AdvertType)
-        //       .Include(x => x.Home)
-        //       .ToListAsync();
-        //}
+        public async Task<Advert> AdvertDetail(int advertId)
+        {
+            return (await _context.Adverts
+                .Include(x => x.AdvertType)
+                .Include(x => x.Home)
+                    .ThenInclude(x => x.RoomCount)
+                .Include(x => x.Home)
+                    .ThenInclude(x => x.HomeImages)
+                .Include(x => x.Home)
+                    .ThenInclude(x => x.Apartment)
+                        .ThenInclude(x => x.District)
+                            .ThenInclude(x => x.County)
+                                .ThenInclude(x => x.City)
+                .Include(x => x.Home)
+                    .ThenInclude(x => x.Apartment)
+                        .ThenInclude(x => x.BuildingComplex)
+                .Include(x => x.Home)
+                    .ThenInclude(x => x.Apartment)
+                        .ThenInclude(x => x.HeatingType)
+                .Where(x=>x.Id == advertId)
+                .FirstOrDefaultAsync())!;
+        }
 
         public async Task<List<Advert>> AdvertFilter(AdvertFilterDto filter)
         {
@@ -63,38 +50,38 @@ namespace ApsiyonKasif.Repository.Repositories
 
             Expression<Func<Advert, bool>> predicate = x => true;
 
-            if (filter.MaxPrice.HasValue)
-                predicate = CombineExpressions(predicate, x => x.Price <= filter.MaxPrice.Value);
+            if (filter.maxPrice.HasValue)
+                predicate = CombineExpressions(predicate, x => x.Price <= filter.maxPrice.Value);
 
-            if (filter.MinPrice.HasValue)
-                predicate = CombineExpressions(predicate, x => x.Price >= filter.MinPrice.Value);
+            if (filter.minPrice.HasValue)
+                predicate = CombineExpressions(predicate, x => x.Price >= filter.minPrice.Value);
 
-            if (filter.MaxApartmentAge.HasValue)
-                predicate = CombineExpressions(predicate, x => x.Home.Apartment.Age <= filter.MaxApartmentAge.Value);
+            if (filter.maxApartmentAge.HasValue)
+                predicate = CombineExpressions(predicate, x => x.Home.Apartment.Age <= filter.maxApartmentAge.Value);
 
-            if (filter.MinApartmentAge.HasValue)
-                predicate = CombineExpressions(predicate, x => x.Home.Apartment.Age >= filter.MinApartmentAge.Value);
+            if (filter.minApartmentAge.HasValue)
+                predicate = CombineExpressions(predicate, x => x.Home.Apartment.Age >= filter.minApartmentAge.Value);
 
-            if (filter.Dues.HasValue)
-                predicate = CombineExpressions(predicate, x => x.Home.Apartment.Dues == filter.Dues.Value);
+            if (filter.dues.HasValue)
+                predicate = CombineExpressions(predicate, x => x.Home.Apartment.Dues == filter.dues.Value);
 
-            if (filter.RoomCountId.HasValue)
-                predicate = CombineExpressions(predicate, x => x.Home.RoomCountId == filter.RoomCountId.Value);
+            if (filter.roomCountId.HasValue)
+                predicate = CombineExpressions(predicate, x => x.Home.RoomCountId == filter.roomCountId.Value);
 
-            if (filter.Floor.HasValue)
-                predicate = CombineExpressions(predicate, x => x.Home.Floor == filter.Floor.Value);
+            if (filter.floor.HasValue)
+                predicate = CombineExpressions(predicate, x => x.Home.Floor == filter.floor.Value);
 
-            if (filter.MinNetArea.HasValue)
-                predicate = CombineExpressions(predicate, x => x.Home.NetArea >= filter.MinNetArea.Value);
+            if (filter.minNetArea.HasValue)
+                predicate = CombineExpressions(predicate, x => x.Home.NetArea >= filter.minNetArea.Value);
 
-            if (filter.MaxNetArea.HasValue)
-                predicate = CombineExpressions(predicate, x => x.Home.NetArea <= filter.MaxNetArea.Value);
+            if (filter.maxNetArea.HasValue)
+                predicate = CombineExpressions(predicate, x => x.Home.NetArea <= filter.maxNetArea.Value);
 
-            if (filter.HasFurnished.HasValue)
-                predicate = CombineExpressions(predicate, x => x.Home.HasFurnished == filter.HasFurnished.Value);
+            if (filter.hasFurnished.HasValue)
+                predicate = CombineExpressions(predicate, x => x.Home.HasFurnished == filter.hasFurnished.Value);
 
-            if (filter.HeatingTypeId.HasValue)
-                predicate = CombineExpressions(predicate, x => x.Home.Apartment.HeatingTypeId == filter.HeatingTypeId.Value);
+            if (filter.heatingTypeId.HasValue)
+                predicate = CombineExpressions(predicate, x => x.Home.Apartment.HeatingTypeId == filter.heatingTypeId.Value);
 
             return await query.Where(predicate).ToListAsync();
         }

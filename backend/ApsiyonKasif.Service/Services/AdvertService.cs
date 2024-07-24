@@ -19,6 +19,11 @@ namespace ApsiyonKasif.Service.Services
             _advertRepository = advertRepository;
         }
 
+        public async Task<Advert> AdvertDetail(int advertId)
+        {
+            return await _advertRepository.AdvertDetail(advertId);
+        }
+
         public async Task<List<Advert>> AdvertFilter(AdvertFilterDto filter)
         {
             return await _advertRepository.AdvertFilter(filter);

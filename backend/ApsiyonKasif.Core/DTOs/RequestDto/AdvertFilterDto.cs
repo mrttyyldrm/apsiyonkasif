@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 namespace ApsiyonKasif.Core.DTOs.RequestDto
 {
     public record AdvertFilterDto(
-        decimal? MaxPrice,
-        decimal? MinPrice,
-        int? MinApartmentAge,
-        int? MaxApartmentAge,
-        decimal? Dues,
-        int? RoomCountId,
-        int? Floor,
-        decimal? MinNetArea,
-        decimal? MaxNetArea,
-        bool? HasFurnished,
-        int? HeatingTypeId
+        decimal? maxPrice,
+        decimal? minPrice,
+        int? minApartmentAge,
+        int? maxApartmentAge,
+        decimal? dues,
+        int? roomCountId,
+        int? floor,
+        decimal? minNetArea,
+        decimal? maxNetArea,
+        bool? hasFurnished,
+        int? heatingTypeId
         );
 }

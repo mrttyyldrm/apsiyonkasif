@@ -53,10 +53,13 @@ namespace ApsionKasif.API.Controllers
                 return Ok(new
                 {
                     token = new JwtSecurityTokenHandler().WriteToken(token),
-                    expiration = token.ValidTo
                 });
             }
-            return Unauthorized();
+            return StatusCode(StatusCodes.Status401Unauthorized, new ResponseDto
+            {
+                Status = "Error",
+                Message = "Hatalı E Posta veya Parola!"
+            });
         }
         [HttpPost]
         [Route("Register")]
@@ -68,7 +71,7 @@ namespace ApsionKasif.API.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, new ResponseDto
                 {
                     Status = "Error",
-                    Message = "User Alreadys Exists !"
+                    Message = "Kullanıcı adı daha önce alınmış!"
                 });
 
             AppUser user = new()
@@ -83,13 +86,13 @@ namespace ApsionKasif.API.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, new ResponseDto
                 {
                     Status = "Error",
-                    Message = "User creation failed! Please check user details and try again."
+                    Message = "Kullanıcı oluşturulmadı. Lütfen daha sonra tekrar deneyiniz!"
                 });
 
             return Ok(new ResponseDto
             {
                 Status = "Success",
-                Message = "User created successfully!"
+                Message = "Kullanıcı başarı ile oluşturuldu!"
             });
         }
         private JwtSecurityToken GetToken(List<Claim> authClaims)

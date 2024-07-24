@@ -13,15 +13,16 @@ namespace ApsiyonKasif.Core.Entities
         public string Title { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
+        public DateTime CreatedDate { get; set; }
 
         public int AdvertTypeId { get; set; }
 
-        [JsonIgnore]
+        //[JsonIgnore]
         public AdvertType AdvertType { get; set; }
 
         public int HomeId { get; set; }
 
-        [JsonIgnore]
+        //[JsonIgnore]
         public Home Home { get; set; }
     }
 }

@@ -28,9 +28,18 @@ namespace ApsionKasif.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> AdvertFiler([FromQuery] AdvertFilterDto filter)
+        [Route("AdvertFilter")]
+        public async Task<IActionResult> AdvertFilter([FromQuery] AdvertFilterDto filter)
         {
             return Ok(await _advertService.AdvertFilter(filter));
         }
+
+        [HttpGet]
+        [Route("AdvertDetail")]
+        public async Task<IActionResult> AdvertDetail(int advertId)
+        {
+            return Ok(await _advertService.AdvertDetail(advertId));
+        }
+
     }
 }

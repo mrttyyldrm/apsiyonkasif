@@ -18,6 +18,7 @@ namespace ApsiyonKasif.Core.Entities
         public string Direction { get; set; }
         public bool HasBalcony { get; set; }
         public bool HasFurnished { get; set; }
+        public int BathroomCount { get; set; }
 
         [Column(TypeName = "decimal(8,6)")]
         public decimal Longitude { get; set; }
@@ -27,12 +28,12 @@ namespace ApsiyonKasif.Core.Entities
 
         public int ApartmentId { get; set; }
 
-        [JsonIgnore]
+        //[JsonIgnore]
         public Apartment Apartment { get; set; }
 
         public int RoomCountId { get; set; }
 
-        [JsonIgnore]
+        //[JsonIgnore]
         public RoomCount RoomCount { get; set; }
 
         [JsonIgnore]
@@ -41,7 +42,7 @@ namespace ApsiyonKasif.Core.Entities
         [JsonIgnore]
         public ICollection<Invoice> Invoices { get; set; }
 
-        [JsonIgnore]
+        //[JsonIgnore]
         public ICollection<HomeImage> HomeImages { get; set; }
     }
 }

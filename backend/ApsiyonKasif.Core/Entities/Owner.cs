@@ -10,8 +10,10 @@ namespace ApsiyonKasif.Core.Entities
     public class Owner
     {
         public int Id { get; set; }
-        public decimal Price { get; set; }
+        public int HomeId { get; set; }
 
+        [JsonIgnore]
+        public Home Home { get; set; }
         public int AppUserId { get; set; }
 
         [JsonIgnore]

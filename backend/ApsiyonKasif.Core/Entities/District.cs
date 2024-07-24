@@ -14,7 +14,7 @@ namespace ApsiyonKasif.Core.Entities
 
         public int CountyId { get; set; }
 
-        [JsonIgnore]
+        //[JsonIgnore]
         public County County { get; set; }
 
         [JsonIgnore]

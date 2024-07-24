@@ -36,7 +36,7 @@ namespace ApsiyonKasif.Core.Entities
         public BuildingComplex BuildingComplex { get; set; }    
 
         public int HeatingTypeId { get; set; }
-
+        
         //[JsonIgnore]
         public HeatingType HeatingType { get; set; }
 

@@ -52,7 +52,8 @@ namespace ApsionKasif.API.Controllers
 
                 return Ok(new
                 {
-                    token = new JwtSecurityTokenHandler().WriteToken(token),
+                    token = new JwtSecurityTokenHandler().WriteToken(token)
+                    // expiration = token.ValidTo
                 });
             }
             return StatusCode(StatusCodes.Status401Unauthorized, new ResponseDto

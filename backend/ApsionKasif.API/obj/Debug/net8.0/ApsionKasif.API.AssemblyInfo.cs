@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApsionKasif.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99bcd1c9061f71e9c489f9e0ce56fc7163ffba79")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+732487e57fe44106df894dedab7a00f8269d13cf")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApsionKasif.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApsionKasif.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

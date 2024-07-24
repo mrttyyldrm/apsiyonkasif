@@ -10,22 +10,11 @@ namespace ApsionKasif.API.Controllers
     [ApiController]
     public class IsLoggedController : ControllerBase
     {
-        private readonly IHttpContextAccessor _httpContextAccessor;
-        private readonly AppDbContext _appDbContext;
-
-        public IsLoggedController(IHttpContextAccessor httpContextAccessor, AppDbContext appDbContext)
-        {
-            _httpContextAccessor = httpContextAccessor;
-            _appDbContext = appDbContext;
-        }
-
         [Authorize]
         [HttpGet]
-        public async Task<IActionResult> IsLogged()
+        public IActionResult IsLogged()
         {
-            var userId = _httpContextAccessor.HttpContext!.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            var values = await _appDbContext.AppUsers.FindAsync(userId);
-            return Ok(values);
+            return Ok();
         }
     }
 }

@@ -2,21 +2,26 @@
 using ApsiyonKasif.Core.Entities;
 using ApsiyonKasif.Core.Services;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace ApsionKasif.API.Controllers
 {
     [Route("[controller]")]
     [ApiController]
+    [Authorize]
     public class AdvertController : ControllerBase
     {
         private readonly IAdvertService _advertService;
         private readonly IMapper _mapper;
-        public AdvertController(IAdvertService advertService, IMapper mapper)
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        public AdvertController(IAdvertService advertService, IMapper mapper, IHttpContextAccessor httpContextAccessor)
         {
             _advertService = advertService;
             _mapper = mapper;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         [HttpPost]
@@ -40,6 +45,5 @@ namespace ApsionKasif.API.Controllers
         {
             return Ok(await _advertService.AdvertDetail(advertId));
         }
-
     }
 }

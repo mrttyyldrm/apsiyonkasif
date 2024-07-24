@@ -151,3 +151,6 @@ C:\Users\sekii\source\repos\ApsionKasif.App\ApsionKasif.API\bin\Debug\net8.0\Aps
 C:\Users\sekii\source\repos\ApsionKasif.App\ApsionKasif.API\bin\Debug\net8.0\ApsiyonKasif.Repository.pdb
 C:\Users\sekii\source\repos\ApsionKasif.App\ApsionKasif.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\sekii\source\repos\ApsionKasif.App\ApsionKasif.API\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsionKasif.API\bin\Debug\net8.0\Scrutor.dll
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsionKasif.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.Filters.dll
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsionKasif.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll

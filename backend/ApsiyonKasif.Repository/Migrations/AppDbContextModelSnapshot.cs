@@ -476,12 +476,14 @@ namespace ApsiyonKasif.Repository.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<int>("HomeId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("AppUserId1");
+
+                    b.HasIndex("HomeId");
 
                     b.ToTable("Owners");
                 });
@@ -806,7 +808,15 @@ namespace ApsiyonKasif.Repository.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("ApsiyonKasif.Core.Entities.Home", "Home")
+                        .WithMany()
+                        .HasForeignKey("HomeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("AppUser");
+
+                    b.Navigation("Home");
                 });
 
             modelBuilder.Entity("ApsiyonKasif.Core.Entities.Tenant", b =>

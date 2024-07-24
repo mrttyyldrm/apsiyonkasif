@@ -10,7 +10,7 @@ namespace ApsiyonKasif.Core.Entities
     public class RoomCount
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string Name { get; set; } 
 
         [JsonIgnore]
         public ICollection<Home> Homes { get; set; }

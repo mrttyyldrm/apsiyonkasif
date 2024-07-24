@@ -12,8 +12,15 @@ namespace ApsiyonKasif.Service.Services
 {
     public class DistrictService : GenericService<District>, IDistrictService
     {
-        public DistrictService(IGenericRepository<District> repository, IUnitOfWork unitOfWork) : base(repository, unitOfWork)
+        private readonly IDistrictRepository _districtRepository;
+        public DistrictService(IGenericRepository<District> repository, IUnitOfWork unitOfWork, IDistrictRepository districtRepository) : base(repository, unitOfWork)
         {
+            _districtRepository = districtRepository;
+        }
+
+        public async Task<District> GetDistrictDetailsAsync(int districtId)
+        {
+            return await _districtRepository.GetDistrictDetailsAsync(districtId);
         }
     }
 }

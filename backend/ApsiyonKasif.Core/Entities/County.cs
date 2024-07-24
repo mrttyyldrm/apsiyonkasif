@@ -14,7 +14,7 @@ namespace ApsiyonKasif.Core.Entities
 
         public int CityId { get; set; }
 
-        [JsonIgnore]
+        //[JsonIgnore]
         public City City { get; set; }
 
         [JsonIgnore]

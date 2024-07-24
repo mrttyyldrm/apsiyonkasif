@@ -1,0 +1,35 @@
+@import "@/styles/color.scss";
+@import "@/styles/components/text.scss";
+
+%information {
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    align-items: center;
+    gap: 1.5rem;
+
+    #information-logo {
+        background-color: $primary;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+
+    #information-text {
+        border-radius: 1rem 1rem 1rem 0;
+        background-color: $primary;
+        padding: 1rem 1.5rem;
+
+        p {
+            @extend %text;
+            font-weight: 600;
+            color: $white;
+        }
+    }
+}

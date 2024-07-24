@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/7vtKHQeejg=",
+  "dgSpecHash": "nC3k5YC8Xf0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\sekii\\source\\repos\\ApsionKasif.App\\ApsionKasif.API\\ApsionKasif.API.csproj",
+  "projectFilePath": "C:\\Users\\sekii\\OneDrive\\Masaüstü\\apsiyonkasif\\backend\\ApsionKasif.API\\ApsionKasif.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sekii\\.nuget\\packages\\autofac\\8.0.0\\autofac.8.0.0.nupkg.sha512",
     "C:\\Users\\sekii\\.nuget\\packages\\autofac.extensions.dependencyinjection\\9.0.0\\autofac.extensions.dependencyinjection.9.0.0.nupkg.sha512",

@@ -2996,11 +2996,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sekii\\source\\repos\\ApsionKasif.App\\ApsiyonKasif.Service\\ApsiyonKasif.Service.csproj",
+      "projectUniqueName": "C:\\Users\\sekii\\OneDrive\\Masaüstü\\apsiyonkasif\\backend\\ApsiyonKasif.Service\\ApsiyonKasif.Service.csproj",
       "projectName": "ApsiyonKasif.Service",
-      "projectPath": "C:\\Users\\sekii\\source\\repos\\ApsionKasif.App\\ApsiyonKasif.Service\\ApsiyonKasif.Service.csproj",
+      "projectPath": "C:\\Users\\sekii\\OneDrive\\Masaüstü\\apsiyonkasif\\backend\\ApsiyonKasif.Service\\ApsiyonKasif.Service.csproj",
       "packagesPath": "C:\\Users\\sekii\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sekii\\source\\repos\\ApsionKasif.App\\ApsiyonKasif.Service\\obj\\",
+      "outputPath": "C:\\Users\\sekii\\OneDrive\\Masaüstü\\apsiyonkasif\\backend\\ApsiyonKasif.Service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sekii\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3018,8 +3018,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\sekii\\source\\repos\\ApsionKasif.App\\ApsiyonKasif.Repository\\ApsiyonKasif.Repository.csproj": {
-              "projectPath": "C:\\Users\\sekii\\source\\repos\\ApsionKasif.App\\ApsiyonKasif.Repository\\ApsiyonKasif.Repository.csproj"
+            "C:\\Users\\sekii\\OneDrive\\Masaüstü\\apsiyonkasif\\backend\\ApsiyonKasif.Repository\\ApsiyonKasif.Repository.csproj": {
+              "projectPath": "C:\\Users\\sekii\\OneDrive\\Masaüstü\\apsiyonkasif\\backend\\ApsiyonKasif.Repository\\ApsiyonKasif.Repository.csproj"
             }
           }
         }

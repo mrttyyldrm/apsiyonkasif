@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ApsiyonKasif.Repository
-build_property.ProjectDir = C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Repository\
+build_property.ProjectDir = C:\Users\sekii\OneDrive\Masaüstü\apsiyonkasif\backend\ApsiyonKasif.Repository\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -820,11 +820,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sekii\\source\\repos\\ApsionKasif.App\\ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj",
+      "projectUniqueName": "C:\\Users\\sekii\\OneDrive\\Masaüstü\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj",
       "projectName": "ApsiyonKasif.Core",
-      "projectPath": "C:\\Users\\sekii\\source\\repos\\ApsionKasif.App\\ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj",
+      "projectPath": "C:\\Users\\sekii\\OneDrive\\Masaüstü\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj",
       "packagesPath": "C:\\Users\\sekii\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sekii\\source\\repos\\ApsionKasif.App\\ApsiyonKasif.Core\\obj\\",
+      "outputPath": "C:\\Users\\sekii\\OneDrive\\Masaüstü\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sekii\\AppData\\Roaming\\NuGet\\NuGet.Config",

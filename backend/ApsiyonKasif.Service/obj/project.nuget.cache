@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NoXspmMkenQ=",
+  "dgSpecHash": "94uBCLi/0Vs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\sekii\\source\\repos\\ApsionKasif.App\\ApsiyonKasif.Service\\ApsiyonKasif.Service.csproj",
+  "projectFilePath": "C:\\Users\\sekii\\OneDrive\\Masaüstü\\apsiyonkasif\\backend\\ApsiyonKasif.Service\\ApsiyonKasif.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sekii\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\sekii\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

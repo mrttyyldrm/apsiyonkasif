@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7KOXrwFDPWI=",
+  "dgSpecHash": "V0Cv1p5LGxc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\sekii\\source\\repos\\ApsionKasif.App\\ApsiyonKasif.Repository\\ApsiyonKasif.Repository.csproj",
+  "projectFilePath": "C:\\Users\\sekii\\OneDrive\\Masaüstü\\apsiyonkasif\\backend\\ApsiyonKasif.Repository\\ApsiyonKasif.Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sekii\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\sekii\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

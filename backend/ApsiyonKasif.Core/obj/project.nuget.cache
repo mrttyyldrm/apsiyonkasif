@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PkrUnTRvbyU=",
+  "dgSpecHash": "MzWb61vKE0M=",
   "success": true,
-  "projectFilePath": "C:\\Users\\sekii\\source\\repos\\ApsionKasif.App\\ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj",
+  "projectFilePath": "C:\\Users\\sekii\\OneDrive\\Masaüstü\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sekii\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.7\\microsoft.aspnetcore.cryptography.internal.8.0.7.nupkg.sha512",
     "C:\\Users\\sekii\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.7\\microsoft.aspnetcore.cryptography.keyderivation.8.0.7.nupkg.sha512",

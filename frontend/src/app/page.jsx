@@ -7,7 +7,7 @@ import Loading from "@/components/pages/Loading";
 import "@/styles/pages/welcome.scss";
 
 function Welcome() {
-  const [isWelcome, setisWelcome] = useState(true);
+  const [isWelcome, setisWelcome] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {

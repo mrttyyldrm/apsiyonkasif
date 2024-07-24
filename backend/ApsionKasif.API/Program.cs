@@ -10,6 +10,8 @@ using System.Text;
 using ApsiyonKasif.Core.Entities;
 using Microsoft.AspNetCore.Identity;
 using ApsiyonKasif.Service.Mapping;
+using ApsiyonKasif.Core.Services;
+using ApsiyonKasif.Service.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +24,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
 builder.Host.ConfigureContainer<ContainerBuilder>(x => x.RegisterModule(new RepoServiceModule()));
+builder.Services.AddScoped<IAdvertService, AdvertService>();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 {

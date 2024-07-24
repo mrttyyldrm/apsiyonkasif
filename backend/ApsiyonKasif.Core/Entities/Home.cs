@@ -11,13 +11,13 @@ namespace ApsiyonKasif.Core.Entities
     public class Home
     {
         public int Id { get; set; }
-        public string RoomCount { get; set; }
         public int DoorNumber { get; set; }
         public int GrossArea { get; set; }
         public int NetArea { get; set; }
         public int Floor { get; set; }
         public string Direction { get; set; }
         public bool HasBalcony { get; set; }
+        public bool HasFurnished { get; set; }
 
         [Column(TypeName = "decimal(8,6)")]
         public decimal Longitude { get; set; }
@@ -30,10 +30,18 @@ namespace ApsiyonKasif.Core.Entities
         [JsonIgnore]
         public Apartment Apartment { get; set; }
 
+        public int RoomCountId { get; set; }
+
+        [JsonIgnore]
+        public RoomCount RoomCount { get; set; }
+
         [JsonIgnore]
         public Advert Advert { get; set; }
 
         [JsonIgnore]
         public ICollection<Invoice> Invoices { get; set; }
+
+        [JsonIgnore]
+        public ICollection<HomeImage> HomeImages { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using ApsiyonKasif.Core.Entities;
+﻿using ApsiyonKasif.Core.DTOs.RequestDto;
+using ApsiyonKasif.Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,5 +10,6 @@ namespace ApsiyonKasif.Core.Services
 {
     public interface IAdvertService : IGenericService<Advert>
     {
+        Task<List<Advert>> AdvertFilter(AdvertFilterDto filter);
     }
 }

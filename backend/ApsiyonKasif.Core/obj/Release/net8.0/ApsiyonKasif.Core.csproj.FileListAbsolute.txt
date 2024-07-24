@@ -1,0 +1,12 @@
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Core\bin\Release\net8.0\ApsiyonKasif.Core.deps.json
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Core\bin\Release\net8.0\ApsiyonKasif.Core.dll
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Core\bin\Release\net8.0\ApsiyonKasif.Core.pdb
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Core\obj\Release\net8.0\ApsiyonKasif.Core.csproj.AssemblyReference.cache
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Core\obj\Release\net8.0\ApsiyonKasif.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Core\obj\Release\net8.0\ApsiyonKasif.Core.AssemblyInfoInputs.cache
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Core\obj\Release\net8.0\ApsiyonKasif.Core.AssemblyInfo.cs
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Core\obj\Release\net8.0\ApsiyonKasif.Core.csproj.CoreCompileInputs.cache
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Core\obj\Release\net8.0\ApsiyonKasif.Core.dll
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Core\obj\Release\net8.0\refint\ApsiyonKasif.Core.dll
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Core\obj\Release\net8.0\ApsiyonKasif.Core.pdb
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Core\obj\Release\net8.0\ref\ApsiyonKasif.Core.dll

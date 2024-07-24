@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ApsiyonKasif.Core.DTOs.RequestDto
 {
-    public class CreateAdvertDto
+    public record CreateAdvertDto
     {
         public string Title { get; set; }
         public string Description { get; set; }

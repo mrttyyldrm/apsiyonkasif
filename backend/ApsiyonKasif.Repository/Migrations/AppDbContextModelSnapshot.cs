@@ -82,12 +82,14 @@ namespace ApsiyonKasif.Repository.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Age")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Age")
+                        .HasColumnType("int");
 
                     b.Property<int?>("BuildingComplexId")
                         .HasColumnType("int");
+
+                    b.Property<string>("ConnectedBlock")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("DistrictId")
                         .HasColumnType("int");
@@ -111,7 +113,6 @@ namespace ApsiyonKasif.Repository.Migrations
                         .HasColumnType("decimal(8,6)");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("NumberOfFloor")
@@ -349,10 +350,6 @@ namespace ApsiyonKasif.Repository.Migrations
                     b.Property<int>("ApartmentId")
                         .HasColumnType("int");
 
-                    b.Property<string>("ConnectedBlock")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Direction")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -369,6 +366,9 @@ namespace ApsiyonKasif.Repository.Migrations
                     b.Property<bool>("HasBalcony")
                         .HasColumnType("bit");
 
+                    b.Property<bool>("HasFurnished")
+                        .HasColumnType("bit");
+
                     b.Property<decimal>("Latitude")
                         .HasColumnType("decimal(8,6)");
 
@@ -378,13 +378,14 @@ namespace ApsiyonKasif.Repository.Migrations
                     b.Property<int>("NetArea")
                         .HasColumnType("int");
 
-                    b.Property<string>("RoomCount")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("RoomCountId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("ApartmentId");
+
+                    b.HasIndex("RoomCountId");
 
                     b.ToTable("Homes");
                 });
@@ -476,6 +477,23 @@ namespace ApsiyonKasif.Repository.Migrations
                     b.HasIndex("AppUserId1");
 
                     b.ToTable("Owners");
+                });
+
+            modelBuilder.Entity("ApsiyonKasif.Core.Entities.RoomCount", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("RoomCount");
                 });
 
             modelBuilder.Entity("ApsiyonKasif.Core.Entities.Tenant", b =>
@@ -731,13 +749,21 @@ namespace ApsiyonKasif.Repository.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("ApsiyonKasif.Core.Entities.RoomCount", "RoomCount")
+                        .WithMany("Homes")
+                        .HasForeignKey("RoomCountId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Apartment");
+
+                    b.Navigation("RoomCount");
                 });
 
             modelBuilder.Entity("ApsiyonKasif.Core.Entities.HomeImage", b =>
                 {
                     b.HasOne("ApsiyonKasif.Core.Entities.Home", "Home")
-                        .WithMany()
+                        .WithMany("HomeImages")
                         .HasForeignKey("HomeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -881,6 +907,8 @@ namespace ApsiyonKasif.Repository.Migrations
                     b.Navigation("Advert")
                         .IsRequired();
 
+                    b.Navigation("HomeImages");
+
                     b.Navigation("Invoices");
                 });
 
@@ -892,6 +920,11 @@ namespace ApsiyonKasif.Repository.Migrations
             modelBuilder.Entity("ApsiyonKasif.Core.Entities.Owner", b =>
                 {
                     b.Navigation("Appointments");
+                });
+
+            modelBuilder.Entity("ApsiyonKasif.Core.Entities.RoomCount", b =>
+                {
+                    b.Navigation("Homes");
                 });
 #pragma warning restore 612, 618
         }

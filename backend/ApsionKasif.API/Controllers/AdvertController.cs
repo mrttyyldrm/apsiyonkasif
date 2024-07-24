@@ -26,5 +26,11 @@ namespace ApsionKasif.API.Controllers
             await _advertService.AddAsync(advert);
             return Ok("Added");
         }
+
+        [HttpGet]
+        public async Task<IActionResult> AdvertFiler([FromQuery] AdvertFilterDto filter)
+        {
+            return Ok(await _advertService.AdvertFilter(filter));
+        }
     }
 }

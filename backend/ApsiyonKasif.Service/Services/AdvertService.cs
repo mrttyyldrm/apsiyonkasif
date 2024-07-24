@@ -1,4 +1,5 @@
-﻿using ApsiyonKasif.Core.Entities;
+﻿using ApsiyonKasif.Core.DTOs.RequestDto;
+using ApsiyonKasif.Core.Entities;
 using ApsiyonKasif.Core.Repositories;
 using ApsiyonKasif.Core.Services;
 using ApsiyonKasif.Core.UnitOfWork;
@@ -12,8 +13,15 @@ namespace ApsiyonKasif.Service.Services
 {
     public class AdvertService : GenericService<Advert>, IAdvertService
     {
-        public AdvertService(IGenericRepository<Advert> repository, IUnitOfWork unitOfWork) : base(repository, unitOfWork)
+        private readonly IAdvertRepository _advertRepository;
+        public AdvertService(IGenericRepository<Advert> repository, IUnitOfWork unitOfWork, IAdvertRepository advertRepository) : base(repository, unitOfWork)
         {
+            _advertRepository = advertRepository;
+        }
+
+        public async Task<List<Advert>> AdvertFilter(AdvertFilterDto filter)
+        {
+            return await _advertRepository.AdvertFilter(filter);
         }
     }
 }

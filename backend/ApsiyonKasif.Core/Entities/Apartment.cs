@@ -13,7 +13,7 @@ namespace ApsiyonKasif.Core.Entities
         public int Id { get; set; }
         public string? Name { get; set; }
         public string? ConnectedBlock { get; set; }
-        public string Age { get; set; }
+        public int Age { get; set; }
         public decimal Dues { get; set; }
         public int NumberOfFloor { get; set; }
 

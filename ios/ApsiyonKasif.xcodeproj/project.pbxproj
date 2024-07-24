@@ -24,7 +24,6 @@
 		BA635FAA2C4C3CD50076994A /* PlusJakartaSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA635FA32C4C3CD50076994A /* PlusJakartaSans-Bold.ttf */; };
 		BA635FAB2C4C3CD50076994A /* PlusJakartaSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA635FA42C4C3CD50076994A /* PlusJakartaSans-SemiBold.ttf */; };
 		BA635FAE2C4C4AB20076994A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA635FAD2C4C4AB20076994A /* LoginView.swift */; };
-		BA6370922C5029CB005DCAD7 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6370912C5029CB005DCAD7 /* Login.swift */; };
 		BA6370942C502AF1005DCAD7 /* SearchDistrict.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6370932C502AF1005DCAD7 /* SearchDistrict.swift */; };
 		BA6370962C503063005DCAD7 /* NeighbourhoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6370952C503063005DCAD7 /* NeighbourhoodView.swift */; };
 		BA8C5A492C4D69DB00611C6E /* LoginRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8C5A482C4D69DB00611C6E /* LoginRepo.swift */; };
@@ -56,7 +55,6 @@
 		BA635FA42C4C3CD50076994A /* PlusJakartaSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		BA635FAC2C4C3D780076994A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BA635FAD2C4C4AB20076994A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		BA6370912C5029CB005DCAD7 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		BA6370932C502AF1005DCAD7 /* SearchDistrict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDistrict.swift; sourceTree = "<group>"; };
 		BA6370952C503063005DCAD7 /* NeighbourhoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeighbourhoodView.swift; sourceTree = "<group>"; };
 		BA8C5A482C4D69DB00611C6E /* LoginRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepo.swift; sourceTree = "<group>"; };
@@ -124,7 +122,6 @@
 		BA635F922C4C398A0076994A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BA6370912C5029CB005DCAD7 /* Login.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -289,7 +286,6 @@
 				BA48D42E2C4E94AB00C1EB0A /* SearchView.swift in Sources */,
 				BA8C5A492C4D69DB00611C6E /* LoginRepo.swift in Sources */,
 				BA635F832C4C39480076994A /* ApsiyonKasifApp.swift in Sources */,
-				BA6370922C5029CB005DCAD7 /* Login.swift in Sources */,
 				BA433DD22C50FA0100AB5D50 /* FiltersView.swift in Sources */,
 				BA6370962C503063005DCAD7 /* NeighbourhoodView.swift in Sources */,
 				BA6370942C502AF1005DCAD7 /* SearchDistrict.swift in Sources */,

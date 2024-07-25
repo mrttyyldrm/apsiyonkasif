@@ -16,17 +16,9 @@ namespace ApsiyonKasif.Repository.Repositories
         {
         }
 
-        public Task<District> GetDistrictDetailsAsync(int districtId)
+        public async Task<List<District>> GetDistrictsByCountyIdAsync(int countyId)
         {
-            return _context.Districts.
-                Where(d => d.Id == districtId)
-                .Include(d => d.County)
-                .Include(d => d.County)
-                    .ThenInclude(d => d.City)
-                .Include(d => d.County)
-                    .ThenInclude(d => d.City)
-                        .ThenInclude(d => d.Counties)
-                .FirstOrDefaultAsync();
+            return await _context.Districts.Where(x=>x.County.Id==countyId).ToListAsync();
         }
     }
 }

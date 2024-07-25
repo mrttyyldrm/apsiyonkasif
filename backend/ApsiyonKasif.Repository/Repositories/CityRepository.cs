@@ -1,6 +1,7 @@
 ﻿using ApsiyonKasif.Core.Entities;
 using ApsiyonKasif.Core.Repositories;
 using ApsiyonKasif.Repository.Context;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,14 @@ namespace ApsiyonKasif.Repository.Repositories
     {
         public CityRepository(AppDbContext context) : base(context)
         {
+        }
+
+        public async Task<City> GetCityById(int cityId)
+        {
+            return (
+                await _context
+                .Cities
+                .FirstOrDefaultAsync(c => c.Id == cityId)!);
         }
     }
 }

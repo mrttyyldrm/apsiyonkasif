@@ -304,3 +304,4 @@ C:\Users\merts\Masaüstü\apsiyonkasif\backend\ApsionKasif.API\obj\Debug\net8.0\
 C:\Users\merts\Masaüstü\apsiyonkasif\backend\ApsionKasif.API\obj\Debug\net8.0\ApsionKasif.API.pdb
 C:\Users\merts\Masaüstü\apsiyonkasif\backend\ApsionKasif.API\obj\Debug\net8.0\ApsionKasif.API.genruntimeconfig.cache
 C:\Users\merts\Masaüstü\apsiyonkasif\backend\ApsionKasif.API\obj\Debug\net8.0\ref\ApsionKasif.API.dll
+C:\Users\merts\Masaüstü\apsiyonkasif\backend\ApsionKasif.API\obj\Debug\net8.0\ApsionKasif.API.MvcApplicationPartsAssemblyInfo.cs

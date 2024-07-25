@@ -12,8 +12,15 @@ namespace ApsiyonKasif.Service.Services
 {
     public class CountyService : GenericService<County>, ICountyService
     {
-        public CountyService(IGenericRepository<County> repository, IUnitOfWork unitOfWork) : base(repository, unitOfWork)
+        private readonly ICountyRepository _countyRepository;
+        public CountyService(IGenericRepository<County> repository, IUnitOfWork unitOfWork, ICountyRepository countyRepository) : base(repository, unitOfWork)
         {
+            _countyRepository = countyRepository;
+        }
+
+        public async Task<List<County>> GetCountiesByCityIdAsync(int countyId)
+        {
+            return await _countyRepository.GetCountiesByCityIdAsync(countyId);
         }
     }
 }

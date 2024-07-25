@@ -4,5 +4,6 @@ namespace ApsiyonKasif.Core.Services
 {
     public interface ICityService : IGenericService<City>
     {
+        Task<City> GetCityById(int cityId);
     }
 }

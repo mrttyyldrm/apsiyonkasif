@@ -3,24 +3,96 @@
   "WorkspaceRootPath": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A79690C0-D572-47F9-AA53-C050DA18FA18}|ApsiyonKasif.Service\\ApsiyonKasif.Service.csproj|c:\\users\\merts\\masa\u00FCst\u00FC\\apsiyonkasif\\backend\\apsiyonkasif.service\\services\\districtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A79690C0-D572-47F9-AA53-C050DA18FA18}|ApsiyonKasif.Service\\ApsiyonKasif.Service.csproj|solutionrelative:apsiyonkasif.service\\services\\districtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2F8882D5-848B-4576-97B2-328480BF6C32}|ApsionKasif.API\\ApsionKasif.API.csproj|c:\\users\\merts\\masa\u00FCst\u00FC\\apsiyonkasif\\backend\\apsionkasif.api\\controllers\\citydetailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F8882D5-848B-4576-97B2-328480BF6C32}|ApsionKasif.API\\ApsionKasif.API.csproj|solutionrelative:apsionkasif.api\\controllers\\citydetailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A95F6323-0594-4E10-8AB4-9EC0DD918D36}|ApsiyonKasif.Repository\\ApsiyonKasif.Repository.csproj|c:\\users\\merts\\masa\u00FCst\u00FC\\apsiyonkasif\\backend\\apsiyonkasif.repository\\repositories\\districtrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A95F6323-0594-4E10-8AB4-9EC0DD918D36}|ApsiyonKasif.Repository\\ApsiyonKasif.Repository.csproj|solutionrelative:apsiyonkasif.repository\\repositories\\districtrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DF642057-9B21-4FEE-A17D-2F9EDD85E870}|ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj|c:\\users\\merts\\masa\u00FCst\u00FC\\apsiyonkasif\\backend\\apsiyonkasif.core\\services\\icountyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF642057-9B21-4FEE-A17D-2F9EDD85E870}|ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj|solutionrelative:apsiyonkasif.core\\services\\icountyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DF642057-9B21-4FEE-A17D-2F9EDD85E870}|ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj|c:\\users\\merts\\masa\u00FCst\u00FC\\apsiyonkasif\\backend\\apsiyonkasif.core\\entities\\district.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF642057-9B21-4FEE-A17D-2F9EDD85E870}|ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj|solutionrelative:apsiyonkasif.core\\entities\\district.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{DF642057-9B21-4FEE-A17D-2F9EDD85E870}|ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj|c:\\users\\merts\\masa\u00FCst\u00FC\\apsiyonkasif\\backend\\apsiyonkasif.core\\entities\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF642057-9B21-4FEE-A17D-2F9EDD85E870}|ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj|solutionrelative:apsiyonkasif.core\\entities\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DF642057-9B21-4FEE-A17D-2F9EDD85E870}|ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj|c:\\users\\merts\\masa\u00FCst\u00FC\\apsiyonkasif\\backend\\apsiyonkasif.core\\entities\\county.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DF642057-9B21-4FEE-A17D-2F9EDD85E870}|ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj|solutionrelative:apsiyonkasif.core\\entities\\county.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A79690C0-D572-47F9-AA53-C050DA18FA18}|ApsiyonKasif.Service\\ApsiyonKasif.Service.csproj|c:\\users\\merts\\masa\u00FCst\u00FC\\apsiyonkasif\\backend\\apsiyonkasif.service\\services\\cityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A79690C0-D572-47F9-AA53-C050DA18FA18}|ApsiyonKasif.Service\\ApsiyonKasif.Service.csproj|solutionrelative:apsiyonkasif.service\\services\\cityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF642057-9B21-4FEE-A17D-2F9EDD85E870}|ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj|c:\\users\\merts\\masa\u00FCst\u00FC\\apsiyonkasif\\backend\\apsiyonkasif.core\\repositories\\idistrictrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF642057-9B21-4FEE-A17D-2F9EDD85E870}|ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj|solutionrelative:apsiyonkasif.core\\repositories\\idistrictrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF642057-9B21-4FEE-A17D-2F9EDD85E870}|ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj|c:\\users\\merts\\masa\u00FCst\u00FC\\apsiyonkasif\\backend\\apsiyonkasif.core\\repositories\\icityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF642057-9B21-4FEE-A17D-2F9EDD85E870}|ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj|solutionrelative:apsiyonkasif.core\\repositories\\icityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A79690C0-D572-47F9-AA53-C050DA18FA18}|ApsiyonKasif.Service\\ApsiyonKasif.Service.csproj|c:\\users\\merts\\masa\u00FCst\u00FC\\apsiyonkasif\\backend\\apsiyonkasif.service\\services\\countyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A79690C0-D572-47F9-AA53-C050DA18FA18}|ApsiyonKasif.Service\\ApsiyonKasif.Service.csproj|solutionrelative:apsiyonkasif.service\\services\\countyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF642057-9B21-4FEE-A17D-2F9EDD85E870}|ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj|c:\\users\\merts\\masa\u00FCst\u00FC\\apsiyonkasif\\backend\\apsiyonkasif.core\\services\\idistrictservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF642057-9B21-4FEE-A17D-2F9EDD85E870}|ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj|solutionrelative:apsiyonkasif.core\\services\\idistrictservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A79690C0-D572-47F9-AA53-C050DA18FA18}|ApsiyonKasif.Service\\ApsiyonKasif.Service.csproj|c:\\users\\merts\\masa\u00FCst\u00FC\\apsiyonkasif\\backend\\apsiyonkasif.service\\services\\districtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A79690C0-D572-47F9-AA53-C050DA18FA18}|ApsiyonKasif.Service\\ApsiyonKasif.Service.csproj|solutionrelative:apsiyonkasif.service\\services\\districtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F8882D5-848B-4576-97B2-328480BF6C32}|ApsionKasif.API\\ApsionKasif.API.csproj|c:\\users\\merts\\masa\u00FCst\u00FC\\apsiyonkasif\\backend\\apsionkasif.api\\controllers\\advertcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F8882D5-848B-4576-97B2-328480BF6C32}|ApsionKasif.API\\ApsionKasif.API.csproj|solutionrelative:apsionkasif.api\\controllers\\advertcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A95F6323-0594-4E10-8AB4-9EC0DD918D36}|ApsiyonKasif.Repository\\ApsiyonKasif.Repository.csproj|c:\\users\\merts\\masa\u00FCst\u00FC\\apsiyonkasif\\backend\\apsiyonkasif.repository\\repositories\\cityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A95F6323-0594-4E10-8AB4-9EC0DD918D36}|ApsiyonKasif.Repository\\ApsiyonKasif.Repository.csproj|solutionrelative:apsiyonkasif.repository\\repositories\\cityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A95F6323-0594-4E10-8AB4-9EC0DD918D36}|ApsiyonKasif.Repository\\ApsiyonKasif.Repository.csproj|c:\\users\\merts\\masa\u00FCst\u00FC\\apsiyonkasif\\backend\\apsiyonkasif.repository\\repositories\\countyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A95F6323-0594-4E10-8AB4-9EC0DD918D36}|ApsiyonKasif.Repository\\ApsiyonKasif.Repository.csproj|solutionrelative:apsiyonkasif.repository\\repositories\\countyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A95F6323-0594-4E10-8AB4-9EC0DD918D36}|ApsiyonKasif.Repository\\ApsiyonKasif.Repository.csproj|c:\\users\\merts\\masa\u00FCst\u00FC\\apsiyonkasif\\backend\\apsiyonkasif.repository\\repositories\\districtrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A95F6323-0594-4E10-8AB4-9EC0DD918D36}|ApsiyonKasif.Repository\\ApsiyonKasif.Repository.csproj|solutionrelative:apsiyonkasif.repository\\repositories\\districtrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A95F6323-0594-4E10-8AB4-9EC0DD918D36}|ApsiyonKasif.Repository\\ApsiyonKasif.Repository.csproj|c:\\users\\merts\\masa\u00FCst\u00FC\\apsiyonkasif\\backend\\apsiyonkasif.repository\\repositories\\advertrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A95F6323-0594-4E10-8AB4-9EC0DD918D36}|ApsiyonKasif.Repository\\ApsiyonKasif.Repository.csproj|solutionrelative:apsiyonkasif.repository\\repositories\\advertrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A95F6323-0594-4E10-8AB4-9EC0DD918D36}|ApsiyonKasif.Repository\\ApsiyonKasif.Repository.csproj|c:\\users\\merts\\masa\u00FCst\u00FC\\apsiyonkasif\\backend\\apsiyonkasif.repository\\repositories\\buildingcomplexrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A95F6323-0594-4E10-8AB4-9EC0DD918D36}|ApsiyonKasif.Repository\\ApsiyonKasif.Repository.csproj|solutionrelative:apsiyonkasif.repository\\repositories\\buildingcomplexrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A79690C0-D572-47F9-AA53-C050DA18FA18}|ApsiyonKasif.Service\\ApsiyonKasif.Service.csproj|c:\\users\\merts\\masa\u00FCst\u00FC\\apsiyonkasif\\backend\\apsiyonkasif.service\\services\\advertservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A79690C0-D572-47F9-AA53-C050DA18FA18}|ApsiyonKasif.Service\\ApsiyonKasif.Service.csproj|solutionrelative:apsiyonkasif.service\\services\\advertservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F8882D5-848B-4576-97B2-328480BF6C32}|ApsionKasif.API\\ApsionKasif.API.csproj|c:\\users\\merts\\masa\u00FCst\u00FC\\apsiyonkasif\\backend\\apsionkasif.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F8882D5-848B-4576-97B2-328480BF6C32}|ApsionKasif.API\\ApsionKasif.API.csproj|solutionrelative:apsionkasif.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF642057-9B21-4FEE-A17D-2F9EDD85E870}|ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj|c:\\users\\merts\\masa\u00FCst\u00FC\\apsiyonkasif\\backend\\apsiyonkasif.core\\repositories\\icountyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF642057-9B21-4FEE-A17D-2F9EDD85E870}|ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj|solutionrelative:apsiyonkasif.core\\repositories\\icountyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF642057-9B21-4FEE-A17D-2F9EDD85E870}|ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj|c:\\users\\merts\\masa\u00FCst\u00FC\\apsiyonkasif\\backend\\apsiyonkasif.core\\services\\icityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF642057-9B21-4FEE-A17D-2F9EDD85E870}|ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj|solutionrelative:apsiyonkasif.core\\services\\icityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF642057-9B21-4FEE-A17D-2F9EDD85E870}|ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj|c:\\users\\merts\\masa\u00FCst\u00FC\\apsiyonkasif\\backend\\apsiyonkasif.core\\repositories\\iadvertrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF642057-9B21-4FEE-A17D-2F9EDD85E870}|ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj|solutionrelative:apsiyonkasif.core\\repositories\\iadvertrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF642057-9B21-4FEE-A17D-2F9EDD85E870}|ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj|c:\\users\\merts\\masa\u00FCst\u00FC\\apsiyonkasif\\backend\\apsiyonkasif.core\\repositories\\iapartmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF642057-9B21-4FEE-A17D-2F9EDD85E870}|ApsiyonKasif.Core\\ApsiyonKasif.Core.csproj|solutionrelative:apsiyonkasif.core\\repositories\\iapartmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +102,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,26 +110,130 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "City.cs",
+              "DocumentMoniker": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\Entities\\City.cs",
+              "RelativeDocumentMoniker": "ApsiyonKasif.Core\\Entities\\City.cs",
+              "ToolTip": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\Entities\\City.cs",
+              "RelativeToolTip": "ApsiyonKasif.Core\\Entities\\City.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T17:19:29.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CityDetailController.cs",
+              "DocumentMoniker": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsionKasif.API\\Controllers\\CityDetailController.cs",
+              "RelativeDocumentMoniker": "ApsionKasif.API\\Controllers\\CityDetailController.cs",
+              "ToolTip": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsionKasif.API\\Controllers\\CityDetailController.cs",
+              "RelativeToolTip": "ApsionKasif.API\\Controllers\\CityDetailController.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAtwCQAAABZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T16:21:50.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CityService.cs",
+              "DocumentMoniker": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Service\\Services\\CityService.cs",
+              "RelativeDocumentMoniker": "ApsiyonKasif.Service\\Services\\CityService.cs",
+              "ToolTip": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Service\\Services\\CityService.cs",
+              "RelativeToolTip": "ApsiyonKasif.Service\\Services\\CityService.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAWwBYAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T19:20:26.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ICountyService.cs",
+              "DocumentMoniker": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\Services\\ICountyService.cs",
+              "RelativeDocumentMoniker": "ApsiyonKasif.Core\\Services\\ICountyService.cs",
+              "ToolTip": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\Services\\ICountyService.cs",
+              "RelativeToolTip": "ApsiyonKasif.Core\\Services\\ICountyService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAYAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T16:08:47.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AdvertRepository.cs",
+              "DocumentMoniker": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Repository\\Repositories\\AdvertRepository.cs",
+              "RelativeDocumentMoniker": "ApsiyonKasif.Repository\\Repositories\\AdvertRepository.cs",
+              "ToolTip": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Repository\\Repositories\\AdvertRepository.cs",
+              "RelativeToolTip": "ApsiyonKasif.Repository\\Repositories\\AdvertRepository.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAgwCgAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-24T18:39:39.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "DistrictService.cs",
               "DocumentMoniker": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Service\\Services\\DistrictService.cs",
               "RelativeDocumentMoniker": "ApsiyonKasif.Service\\Services\\DistrictService.cs",
               "ToolTip": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Service\\Services\\DistrictService.cs",
               "RelativeToolTip": "ApsiyonKasif.Service\\Services\\DistrictService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAANAAAA",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAWwA0AAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-24T19:10:03.365Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
+              "Title": "IDistrictService.cs",
+              "DocumentMoniker": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\Services\\IDistrictService.cs",
+              "RelativeDocumentMoniker": "ApsiyonKasif.Core\\Services\\IDistrictService.cs",
+              "ToolTip": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\Services\\IDistrictService.cs",
+              "RelativeToolTip": "ApsiyonKasif.Core\\Services\\IDistrictService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAqwAUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T16:08:40.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ICityRepository.cs",
+              "DocumentMoniker": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\Repositories\\ICityRepository.cs",
+              "RelativeDocumentMoniker": "ApsiyonKasif.Core\\Repositories\\ICityRepository.cs",
+              "ToolTip": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\Repositories\\ICityRepository.cs",
+              "RelativeToolTip": "ApsiyonKasif.Core\\Repositories\\ICityRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T16:06:05.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IDistrictRepository.cs",
+              "DocumentMoniker": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\Repositories\\IDistrictRepository.cs",
+              "RelativeDocumentMoniker": "ApsiyonKasif.Core\\Repositories\\IDistrictRepository.cs",
+              "ToolTip": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\Repositories\\IDistrictRepository.cs",
+              "RelativeToolTip": "ApsiyonKasif.Core\\Repositories\\IDistrictRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAYAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T16:06:35.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "County.cs",
               "DocumentMoniker": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\Entities\\County.cs",
               "RelativeDocumentMoniker": "ApsiyonKasif.Core\\Entities\\County.cs",
               "ToolTip": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\Entities\\County.cs",
               "RelativeToolTip": "ApsiyonKasif.Core\\Entities\\County.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAwwBQAAAAjAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAwwBEAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-24T18:40:25.883Z",
               "EditorCaption": ""
@@ -70,35 +246,165 @@
               "RelativeDocumentMoniker": "ApsiyonKasif.Core\\Entities\\District.cs",
               "ToolTip": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\Entities\\District.cs",
               "RelativeToolTip": "ApsiyonKasif.Core\\Entities\\District.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAApAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-24T18:40:05.441Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AdvertRepository.cs",
-              "DocumentMoniker": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Repository\\Repositories\\AdvertRepository.cs",
-              "RelativeDocumentMoniker": "ApsiyonKasif.Repository\\Repositories\\AdvertRepository.cs",
-              "ToolTip": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Repository\\Repositories\\AdvertRepository.cs",
-              "RelativeToolTip": "ApsiyonKasif.Repository\\Repositories\\AdvertRepository.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 8,
+              "Title": "CountyService.cs",
+              "DocumentMoniker": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Service\\Services\\CountyService.cs",
+              "RelativeDocumentMoniker": "ApsiyonKasif.Service\\Services\\CountyService.cs",
+              "ToolTip": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Service\\Services\\CountyService.cs",
+              "RelativeToolTip": "ApsiyonKasif.Service\\Services\\CountyService.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAcwBoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T18:39:39.496Z",
+              "WhenOpened": "2024-07-25T16:28:05.631Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 13,
+              "Title": "CountyRepository.cs",
+              "DocumentMoniker": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Repository\\Repositories\\CountyRepository.cs",
+              "RelativeDocumentMoniker": "ApsiyonKasif.Repository\\Repositories\\CountyRepository.cs",
+              "ToolTip": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Repository\\Repositories\\CountyRepository.cs",
+              "RelativeToolTip": "ApsiyonKasif.Repository\\Repositories\\CountyRepository.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAtwBQAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T16:09:36.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CityRepository.cs",
+              "DocumentMoniker": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Repository\\Repositories\\CityRepository.cs",
+              "RelativeDocumentMoniker": "ApsiyonKasif.Repository\\Repositories\\CityRepository.cs",
+              "ToolTip": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Repository\\Repositories\\CityRepository.cs",
+              "RelativeToolTip": "ApsiyonKasif.Repository\\Repositories\\CityRepository.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAcwBsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T16:13:56.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AdvertController.cs",
+              "DocumentMoniker": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsionKasif.API\\Controllers\\AdvertController.cs",
+              "RelativeDocumentMoniker": "ApsionKasif.API\\Controllers\\AdvertController.cs",
+              "ToolTip": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsionKasif.API\\Controllers\\AdvertController.cs",
+              "RelativeToolTip": "ApsionKasif.API\\Controllers\\AdvertController.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAowAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T17:09:28.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "DistrictRepository.cs",
               "DocumentMoniker": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Repository\\Repositories\\DistrictRepository.cs",
               "RelativeDocumentMoniker": "ApsiyonKasif.Repository\\Repositories\\DistrictRepository.cs",
               "ToolTip": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Repository\\Repositories\\DistrictRepository.cs",
               "RelativeToolTip": "ApsiyonKasif.Repository\\Repositories\\DistrictRepository.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAuwBsAAAA0AAAA",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAtwBQAAABaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-24T18:12:24.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "BuildingComplexRepository.cs",
+              "DocumentMoniker": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Repository\\Repositories\\BuildingComplexRepository.cs",
+              "RelativeDocumentMoniker": "ApsiyonKasif.Repository\\Repositories\\BuildingComplexRepository.cs",
+              "ToolTip": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Repository\\Repositories\\BuildingComplexRepository.cs",
+              "RelativeToolTip": "ApsiyonKasif.Repository\\Repositories\\BuildingComplexRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T16:33:23.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AdvertService.cs",
+              "DocumentMoniker": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Service\\Services\\AdvertService.cs",
+              "RelativeDocumentMoniker": "ApsiyonKasif.Service\\Services\\AdvertService.cs",
+              "ToolTip": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Service\\Services\\AdvertService.cs",
+              "RelativeToolTip": "ApsiyonKasif.Service\\Services\\AdvertService.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAA8AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T16:33:56.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsionKasif.API\\Program.cs",
+              "RelativeDocumentMoniker": "ApsionKasif.API\\Program.cs",
+              "ToolTip": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsionKasif.API\\Program.cs",
+              "RelativeToolTip": "ApsionKasif.API\\Program.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAABoAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T16:46:04.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ICountyRepository.cs",
+              "DocumentMoniker": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\Repositories\\ICountyRepository.cs",
+              "RelativeDocumentMoniker": "ApsiyonKasif.Core\\Repositories\\ICountyRepository.cs",
+              "ToolTip": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\Repositories\\ICountyRepository.cs",
+              "RelativeToolTip": "ApsiyonKasif.Core\\Repositories\\ICountyRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAYAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T16:06:50.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ICityService.cs",
+              "DocumentMoniker": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\Services\\ICityService.cs",
+              "RelativeDocumentMoniker": "ApsiyonKasif.Core\\Services\\ICityService.cs",
+              "ToolTip": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\Services\\ICityService.cs",
+              "RelativeToolTip": "ApsiyonKasif.Core\\Services\\ICityService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T16:07:59.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IAdvertRepository.cs",
+              "DocumentMoniker": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\Repositories\\IAdvertRepository.cs",
+              "RelativeDocumentMoniker": "ApsiyonKasif.Core\\Repositories\\IAdvertRepository.cs",
+              "ToolTip": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\Repositories\\IAdvertRepository.cs",
+              "RelativeToolTip": "ApsiyonKasif.Core\\Repositories\\IAdvertRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T16:06:29.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IApartmentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\Repositories\\IApartmentRepository.cs",
+              "RelativeDocumentMoniker": "ApsiyonKasif.Core\\Repositories\\IApartmentRepository.cs",
+              "ToolTip": "C:\\Users\\merts\\Masa\u00FCst\u00FC\\apsiyonkasif\\backend\\ApsiyonKasif.Core\\Repositories\\IApartmentRepository.cs",
+              "RelativeToolTip": "ApsiyonKasif.Core\\Repositories\\IApartmentRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T16:06:27.678Z",
               "EditorCaption": ""
             }
           ]

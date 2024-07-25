@@ -26,7 +26,8 @@ builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
 builder.Host.ConfigureContainer<ContainerBuilder>(x => x.RegisterModule(new RepoServiceModule()));
 builder.Services.AddScoped<IAdvertService, AdvertService>();
 builder.Services.AddScoped<IDistrictService, DistrictService>();
-
+builder.Services.AddScoped<ICityService, CityService>();
+builder.Services.AddScoped<ICountyService, CountyService>();
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("SqlCon"), x =>

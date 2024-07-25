@@ -12,8 +12,15 @@ namespace ApsiyonKasif.Service.Services
 {
     public class CityService : GenericService<City>, ICityService
     {
-        public CityService(IGenericRepository<City> repository, IUnitOfWork unitOfWork) : base(repository, unitOfWork)
+        private readonly ICityRepository _cityRepository;
+        public CityService(IGenericRepository<City> repository, IUnitOfWork unitOfWork, ICityRepository cityRepository) : base(repository, unitOfWork)
         {
+            _cityRepository = cityRepository;
+        }
+
+        public async Task<City> GetCityById(int cityId)
+        {
+            return await _cityRepository.GetCityById(cityId);
         }
     }
 }

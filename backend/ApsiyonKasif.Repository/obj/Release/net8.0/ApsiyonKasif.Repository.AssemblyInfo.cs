@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApsiyonKasif.Repository")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b3d0bc28a2499dd4a80388abc8709c2c94ea790")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApsiyonKasif.Repository")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApsiyonKasif.Repository")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

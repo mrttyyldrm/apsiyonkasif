@@ -4,7 +4,7 @@ namespace ApsiyonKasif.Core.Services
 {
     public interface IDistrictService : IGenericService<District>
     {
-        Task<District> GetDistrictDetailsAsync(int districtId);
+        Task<List<District>> GetDistrictsByCountyIdAsync(int countyId);
 
     }
 }

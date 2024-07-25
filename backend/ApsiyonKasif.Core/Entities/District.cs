@@ -13,6 +13,7 @@ namespace ApsiyonKasif.Core.Entities
         public string Name { get; set; }
         [JsonIgnore]
         public int CountyId { get; set; }
+        [JsonIgnore]
         public County County { get; set; }
 
         [JsonIgnore]

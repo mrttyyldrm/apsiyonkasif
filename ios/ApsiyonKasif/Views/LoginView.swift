@@ -12,8 +12,6 @@ struct LoginView: View {
     @State var email = ""
     @State var password = ""
     @State private var isPasswordVisible = false
-    @State var isGuideView = false
-    
     @ObservedObject var viewModel = LoginViewModel()
     
     var body: some View {
@@ -114,19 +112,19 @@ struct LoginView: View {
                             .padding()
                     }
                     
-                    NavigationLink(destination: GuideView(), isActive: $isGuideView) {
-                        Button(action: {
-                            viewModel.login(email: email, password: password) {
-                                isGuideView = true
-                            }
-                        }) {
-                            Text("Giriş Yap")
-                                .font(.system(size: 16, weight: .bold))
-                                .foregroundColor(.customWhite)
-                                .frame(width: 327, height: 48)
-                                .background(Color.bgBlue)
-                                .cornerRadius(8.0)
-                        }
+                    NavigationLink(destination: GuideView(), isActive: $viewModel.isAuthenticated) {
+                        EmptyView()
+                    }
+                    
+                    Button(action: {
+                        viewModel.login(email: email, password: password)
+                    }) {
+                        Text("Giriş Yap")
+                            .font(.system(size: 16, weight: .bold))
+                            .foregroundColor(.customWhite)
+                            .frame(width: 327, height: 48)
+                            .background(Color.bgBlue)
+                            .cornerRadius(8.0)
                     }
                 }
                 .background(Color.bg)
@@ -143,8 +141,6 @@ struct LoginView: View {
             .background(Color.bg)
         }
         .navigationBarHidden(true)
-        .navHide
-        
     }
     
     private func hideKeyboard() {

@@ -11,8 +11,6 @@ import RxSwift
 
 class LoginRepo {
     
-    var login = BehaviorSubject<[Login]>(value: [Login]())
-    
     func login(email: String, password: String) -> Observable<Result<String, Error>> {
         let url = "https://apsiyonkasif.mlsadpu.com"
         let parameters: [String: String] = [

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SearchView: View {
+struct AdvertView: View {
     
     @State private var navigateToSearchLocation = false
     
@@ -74,5 +74,5 @@ struct SearchView: View {
 }
 
 #Preview {
-    SearchView()
+    AdvertView()
 }

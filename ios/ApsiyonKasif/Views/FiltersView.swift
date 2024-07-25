@@ -33,6 +33,7 @@ struct FiltersView: View {
         ZStack {
             Color.bg
                 .ignoresSafeArea()
+            Text("qwdsaasf")
             
             SearchHeader(value: 1, text: "İlan filtreleri ile daha keskin\narama sonuçları elde edebilirsin!")
             

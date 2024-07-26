@@ -2,9 +2,9 @@
 
 import React, { useState } from "react";
 import "@/styles/pages/login.scss";
-import Control from "@/components/general/Control";
-import Button from "@/components/general/Button";
-import Information from "@/components/general/Information";
+import Control from "@/components/Control";
+import Button from "@/components/Button";
+import Information from "@/components/Information";
 import { Auth } from "@/api";
 import { useRouter } from "next/navigation";
 

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import Button from "@/components/general/Button";
+import Button from "@/components/Button";
 import "@/styles/pages/guide.scss";
 import { IsLogged } from "@/api";
 import { useRouter } from "next/navigation";

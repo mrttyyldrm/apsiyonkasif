@@ -23,20 +23,51 @@ export const Auth = async (email, password) => {
 };
 
 export const IsLogged = async (token) => {
-    const params = {
-        token: token
-    };
-
     try {
-        const response = await API.post("/IsLogged", JSON.stringify(params), {
+        const response = await API.get("/IsLogged", {
             headers: {
-                "Content-Type": "application/json",
+                "Authorization": "Bearer " + token
             },
         });
-        localStorage.removeItem("token");
         return response.data;
     } catch (error) {
         localStorage.removeItem("token");
+        throw error.response.data;
+    }
+};
+
+export const GetCity = async () => {
+    try {
+        const response = await API.get("/City");
+        return response.data;
+    } catch (error) {
+        throw error.response.data;
+    }
+};
+
+export const GetCounty = async (id) => {
+    try {
+        const response = await API.get(`/County/${id}`);
+        return response.data;
+    } catch (error) {
+        throw error.response.data;
+    }
+};
+
+export const GetDistrict = async (id) => {
+    try {
+        const response = await API.get(`/District/${id}`);
+        return response.data;
+    } catch (error) {
+        throw error.response.data;
+    }
+};
+
+export const FilterWithId = async (datas) => {
+    try {
+        const response = await API.get(`/Advet/AdvertFilterWithId?advertTypeId=${datas.advertTypeId}&cityId=${datas.cityId}&countyId=${datas.countyId}&districtId=${datas.districtId}`);
+        return response.data;
+    } catch (error) {
         throw error.response.data;
     }
 };

@@ -5,11 +5,11 @@ function Button(props) {
     <button
       onClick={props.onClickHandler}
       className={
-        props.isActive && props.isActive + props.isLoading && "loading"
+        (props.isActive ? "active " : "") + (props.isLoading ? "loading" : "")
       }
     >
       {props.isLoading ? (
-        <i class="fa-solid fa-circle-notch fa-spin"></i>
+        <i className="fa-solid fa-circle-notch fa-spin"></i>
       ) : (
         <p>{props.text}</p>
       )}

@@ -17,8 +17,8 @@ main {
             gap: 3rem;
 
             #welcome-logo {
-                width: 15rem;
-                height: 15rem;
+                width: 12.5rem;
+                height: 12.5rem;
                 border-radius: 50%;
                 background-color: $primary;
                 display: flex;
@@ -26,8 +26,8 @@ main {
                 align-items: center;
 
                 img {
-                    width: 10rem;
-                    height: 10rem;
+                    width: 8rem;
+                    height: 8rem;
                 }
             }
 
@@ -44,7 +44,7 @@ main {
 
                 p {
                     @extend %text;
-                    max-width: 30rem;
+                    max-width: 35rem;
                     text-align: center;
                 }
             }

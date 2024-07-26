@@ -1,46 +1,34 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "@/styles/pages/login.scss";
 import Control from "@/components/general/Control";
 import Button from "@/components/general/Button";
 import Information from "@/components/general/Information";
-import axios from "axios";
+import { Auth } from "@/api";
+import { useRouter } from "next/navigation";
 
 function Login() {
-  const [datas, setDatas] = useState({ email: "", password: "" });
+  const router = useRouter();
+  const [datas, setDatas] = useState({
+    email: "test@apsiyon.com",
+    password: "Apsiyon123.",
+  });
   const [loginLoading, setloginLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const loginUser = async (e) => {
-    if (datas.email !== "" && datas.password !== "") {
+  const handleLogin = async () => {
+    if (datas.email !== "" && datas.password !== "" && !loginLoading) {
       setError("");
       setloginLoading(true);
 
-      const params = {
-        email: datas.email,
-        password: datas.password,
-      };
-
       try {
-        const response = await axios.post(
-          "https://api.mlsadpu.com/auth",
-          JSON.stringify(params),
-          {
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        );
-
-        localStorage.setItem("token", response.data.token);
-
-        setDatas({ email: "", password: "" });
-        setloginLoading(false);
+        const data = await Auth(datas.email, datas.password);
+        localStorage.setItem("token", data.token);
+        router.push("/guide");
       } catch (error) {
         localStorage.removeItem("token");
-
-        setError(error.response.data.message);
+        setError(error.message);
         setDatas({ email: "", password: "" });
         setloginLoading(false);
       }
@@ -57,7 +45,10 @@ function Login() {
       <div id="login-content">
         <div id="login-title">
           <h1>Giriş Yap</h1>
-          <p>Apsiyon platform hesabınızla giriş yaparak kullanmaya başlayın!</p>
+          <p>
+            Mevcut Apsiyon hesabınızla giriş yaparak uygulamayı kullanmaya
+            başlayın!
+          </p>
         </div>
         <div id="login-controls">
           <Control
@@ -88,7 +79,7 @@ function Login() {
       <div id="login-button">
         <Button
           text="Giriş Yap"
-          onClickHandler={loginUser}
+          onClickHandler={handleLogin}
           isLoading={loginLoading}
         ></Button>
       </div>

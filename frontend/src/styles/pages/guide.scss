@@ -1,0 +1,98 @@
+@import "@/styles/color.scss";
+@import "@/styles/components/button";
+@import "@/styles/components/text";
+
+main {
+    section#guide {
+        padding: 0;
+        grid-template-rows: 1fr auto;
+        gap: 3rem;
+
+        #guide-content {
+            padding: 3rem 3rem 0 3rem;
+            display: grid;
+            grid-template-rows: auto 1fr;
+            gap: 3rem;
+
+            #guide-logo {
+                margin: 0 auto;
+                width: 12.5rem;
+                height: 12.5rem;
+                background-color: $primary;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 8rem;
+                    height: 8rem;
+                }
+            }
+
+            #guide-chat {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+
+                .message {
+                    padding: 1rem 1.5rem;
+
+                    &.incoming {
+                        margin-right: 3rem;
+                        border-radius: 1rem 1rem 1rem 0;
+                        background-color: $primary;
+
+                        p {
+                            color: $white;
+                        }
+                    }
+
+                    &.outgoing {
+                        margin-left: 3rem;
+                        border-radius: 1rem 1rem 0 1rem;
+                        background-color: $white;
+
+                        p {
+                            color: $black;
+                        }
+                    }
+
+                    p {
+                        @extend %text;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        #guide-buttons {
+            background-color: $primary;
+            border-radius: 4rem 4rem 0 0;
+            padding: 3rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            gap: 1.5rem;
+
+            button {
+                @extend %button;
+                padding: 1.5rem;
+
+                &:first-child {
+                    border-radius: 1rem 1rem 1rem 0;
+                }
+
+                &:nth-child(2) {
+                    border-radius: 1rem 1rem 0 1rem;
+                }
+
+                &:last-child {
+                    grid-column: 1 / span 2;
+                    border-radius: 0 0 1rem 1rem;
+                }
+            }
+        }
+    }
+}

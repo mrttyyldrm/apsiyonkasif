@@ -1,10 +1,9 @@
 import "@/styles/base.scss";
 import Head from "next/head";
 import Script from "next/script";
-import { Plus_Jakarta_Sans } from "next/font/google";
 
 export const metadata = {
-  title: "Ana Sayfa | Apsiyon Kaşif",
+  title: "Apsiyon Kaşif",
   description:
     "Apsiyon Kaşif | Aspire Ekibi Apsiyon Proptech Hackathon Projesi",
 };
@@ -24,7 +23,7 @@ export default function RootLayout({ children }) {
       <body>
         <main>{children}</main>
       </body>
-      <Script src="https://kit.fontawesome.com/486aaf834f.js"></Script>
+      <Script src="https://kit.fontawesome.com/9ed0001a15.js"></Script>
     </html>
   );
 }

@@ -3,7 +3,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import Link from "next/link";
-import Loading from "@/components/pages/Loading";
+import Loading from "@/components/Loading";
 import "@/styles/pages/welcome.scss";
 
 function Welcome() {

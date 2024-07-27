@@ -40,6 +40,10 @@
             cursor: pointer;
             font-size: 1.5rem;
             color: $black;
+
+            &.fa-magnifying-glass {
+                color: $primary;
+            }
         }
 
         p {

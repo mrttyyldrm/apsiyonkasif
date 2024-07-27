@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import Button from "@/components/general/Button";
+import Button from "@/components/Button";
 import "@/styles/pages/guide.scss";
 import { IsLogged } from "@/api";
 import { useRouter } from "next/navigation";
@@ -45,7 +45,7 @@ function Guide() {
     }
   };
 
-  const handleLogged = async () => {
+  const handleIsLogged = async () => {
     try {
       await IsLogged(localStorage.getItem("token"));
     } catch (error) {
@@ -54,7 +54,7 @@ function Guide() {
   };
 
   useEffect(() => {
-    handleLogged();
+    handleIsLogged();
   }, []);
 
   return (

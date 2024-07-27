@@ -23,20 +23,67 @@ export const Auth = async (email, password) => {
 };
 
 export const IsLogged = async (token) => {
-    const params = {
-        token: token
-    };
-
     try {
-        const response = await API.post("/IsLogged", JSON.stringify(params), {
+        const response = await API.get("/IsLogged", {
             headers: {
-                "Content-Type": "application/json",
+                "Authorization": "Bearer " + token
             },
         });
-        localStorage.removeItem("token");
         return response.data;
     } catch (error) {
         localStorage.removeItem("token");
+        throw error.response.data;
+    }
+};
+
+export const GetCity = async () => {
+    try {
+        const response = await API.get("/City", {
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem("token")
+            },
+        });
+        return response.data;
+    } catch (error) {
+        throw error.response.data;
+    }
+};
+
+export const GetCounty = async (id) => {
+    try {
+        const response = await API.get(`/County/${id}`, {
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem("token")
+            },
+        });
+        return response.data;
+    } catch (error) {
+        throw error.response.data;
+    }
+};
+
+export const GetDistrict = async (id) => {
+    try {
+        const response = await API.get(`/District/${id}`, {
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem("token")
+            },
+        });
+        return response.data;
+    } catch (error) {
+        throw error.response.data;
+    }
+};
+
+export const FilterWithId = async (query) => {
+    try {
+        const response = await API.get(`/Advert/AdvertFilterWithId?${query}`, {
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem("token")
+            },
+        });
+        return response.data;
+    } catch (error) {
         throw error.response.data;
     }
 };

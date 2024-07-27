@@ -16,12 +16,15 @@ function Control(props) {
 
   return (
     <div className="control">
-      <label>{props.label}</label>
+      {props.label !== undefined && <label>{props.label}</label>}
       <div className="control-input">
+        {props.type === "search" && (
+          <i className="fa-solid fa-magnifying-glass"></i>
+        )}
         <input
           type={props.type === "password" ? visibility.type : props.type}
           placeholder={props.placeholder}
-          onChange={props.onChangeEventHandler}
+          onChange={props.onChangeHandler}
           value={props.value}
         />
         {props.type === "password" ? (

@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
       <body>
         <main>{children}</main>
       </body>
-      <Script src="https://kit.fontawesome.com/486aaf834f.js"></Script>
+      <Script src="https://kit.fontawesome.com/9ed0001a15.js"></Script>
     </html>
   );
 }

@@ -38,7 +38,11 @@ export const IsLogged = async (token) => {
 
 export const GetCity = async () => {
     try {
-        const response = await API.get("/City");
+        const response = await API.get("/City", {
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem("token")
+            },
+        });
         return response.data;
     } catch (error) {
         throw error.response.data;
@@ -47,7 +51,11 @@ export const GetCity = async () => {
 
 export const GetCounty = async (id) => {
     try {
-        const response = await API.get(`/County/${id}`);
+        const response = await API.get(`/County/${id}`, {
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem("token")
+            },
+        });
         return response.data;
     } catch (error) {
         throw error.response.data;
@@ -56,16 +64,24 @@ export const GetCounty = async (id) => {
 
 export const GetDistrict = async (id) => {
     try {
-        const response = await API.get(`/District/${id}`);
+        const response = await API.get(`/District/${id}`, {
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem("token")
+            },
+        });
         return response.data;
     } catch (error) {
         throw error.response.data;
     }
 };
 
-export const FilterWithId = async (datas) => {
+export const FilterWithId = async (query) => {
     try {
-        const response = await API.get(`/Advet/AdvertFilterWithId?advertTypeId=${datas.advertTypeId}&cityId=${datas.cityId}&countyId=${datas.countyId}&districtId=${datas.districtId}`);
+        const response = await API.get(`/Advert/AdvertFilterWithId?${query}`, {
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem("token")
+            },
+        });
         return response.data;
     } catch (error) {
         throw error.response.data;

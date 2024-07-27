@@ -1,0 +1,39 @@
+@use "@/styles/components/bar";
+@use "@/styles/components/control";
+@use "@/styles/components/information";
+@use "@/styles/components/card";
+@use "@/styles/components/text";
+@import "@/styles/color.scss";
+
+main {
+    section#listing {
+        display: grid;
+        grid-template-rows: repeat(2, auto) 1fr auto;
+        gap: 3rem;
+
+        #listing-bar {
+            @extend %bar;
+        }
+
+        #listing-search {
+            .control {
+                @extend %control;
+            }
+        }
+
+        #listing-content {
+            overflow-y: scroll;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            .card {
+                @extend %card;
+            }
+        }
+
+        #listing-information {
+            @extend %information;
+        }
+    }
+}

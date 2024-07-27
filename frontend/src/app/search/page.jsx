@@ -3,8 +3,8 @@
 import React, { useState, useEffect } from "react";
 import "@/styles/pages/search.scss";
 import Information from "@/components/Information";
-import Loading from "@/components/Loading";
 import Progress from "@/components/Progress";
+import Error from "@/components/Error";
 import Button from "@/components/Button";
 import Control from "@/components/Control";
 import { IsLogged, GetCity, GetCounty, GetDistrict } from "@/api";
@@ -20,19 +20,24 @@ function Search() {
     title: "İlan Türü",
   });
 
+  const [error, setError] = useState({
+    situation: false,
+    text: null,
+  });
+
   const [history, setHistory] = useState([]);
   const [cities, setCities] = useState([]);
   const [counties, setCounties] = useState([]);
   const [districts, setDistricts] = useState([]);
 
   const [params, setParams] = useState({
-    advertType: null,
+    advertTypeId: null,
     cityId: null,
     countyId: null,
     districtId: null,
   });
 
-  const handleLogged = async () => {
+  const handleIsLogged = async () => {
     try {
       await IsLogged(localStorage.getItem("token"));
     } catch (error) {
@@ -41,12 +46,11 @@ function Search() {
   };
 
   useEffect(() => {
-    handleLogged();
+    handleIsLogged();
   }, []);
 
   const selectType = (id) => {
-    setParams((previous) => ({ ...previous, advertType: id }));
-    params.advertType = id;
+    setParams((previous) => ({ ...previous, advertTypeId: id }));
     setStep((previous) => ({ ...previous, count: 0 }));
     handleGetCity();
   };
@@ -62,7 +66,10 @@ function Search() {
         title: "İl Seçimi",
       });
     } catch (error) {
-      console.log(error);
+      setError({
+        situation: true,
+        text: "İl listeleme sürecinde bir hata oldu. Lütfen daha sonra tekrar deneyiniz.",
+      });
     }
   };
 
@@ -88,7 +95,10 @@ function Search() {
         title: "İlçe Seçimi",
       });
     } catch (error) {
-      console.log(error);
+      setError({
+        situation: true,
+        text: "İlçe listeleme sürecinde bir hata oldu. Lütfen daha sonra tekrar deneyiniz.",
+      });
     }
   };
 
@@ -114,7 +124,10 @@ function Search() {
         title: "Mahalle Seçimi",
       });
     } catch (error) {
-      console.log(error);
+      setError({
+        situation: true,
+        text: "Mahalle listeleme sürecinde bir hata oldu. Lütfen daha sonra tekrar deneyiniz.",
+      });
     }
   };
 
@@ -140,110 +153,116 @@ function Search() {
   };
 
   return (
-    <section id="search">
-      <div id="search-progress">
-        <Progress ratio={step.ratio}></Progress>
-      </div>
-      <div id="search-information">
-        <Information text={step.information} />
-      </div>
-      <div id="search-title">
-        <h1>{step.title}</h1>
-      </div>
-      <div id="search-content">
-        {step.count === 0 && (
-          <article id="loading">
-            <i className="fa-solid fa-circle-notch fa-spin"></i>
-          </article>
-        )}
-        {step.count === 1 && (
-          <article id="type">
-            <div className="type" onClick={() => selectType(1)}>
-              <div className="type-icon">
-                <i className="fa-solid fa-house-flag"></i>
+    <>
+      {error.situation && <Error text={error.text} />}
+      <section id="search">
+        <div id="search-progress">
+          <Progress ratio={step.ratio}></Progress>
+        </div>
+        <div id="search-information">
+          <Information text={step.information} />
+        </div>
+        <div id="search-title">
+          <h1>{step.title}</h1>
+        </div>
+        <div id="search-content">
+          {step.count === 0 && (
+            <article id="loading">
+              <i className="fa-solid fa-circle-notch fa-spin"></i>
+            </article>
+          )}
+          {step.count === 1 && (
+            <article id="type">
+              <div className="type" onClick={() => selectType(1)}>
+                <div className="type-icon">
+                  <i className="fa-solid fa-house-flag"></i>
+                </div>
+                <h2>Satılık İlanlar</h2>
               </div>
-              <h2>Satılık İlanlar</h2>
-            </div>
-            <div className="type" onClick={() => selectType(2)}>
-              <div className="type-icon">
-                <i className="fa-solid fa-house-chimney-user"></i>
+              <div className="type" onClick={() => selectType(2)}>
+                <div className="type-icon">
+                  <i className="fa-solid fa-house-chimney-user"></i>
+                </div>
+                <h2>Kiralık İlanlar</h2>
               </div>
-              <h2>Kiralık İlanlar</h2>
-            </div>
-          </article>
-        )}
-        {step.count === 2 && (
-          <article id="location">
-            <ul id="location-history">
-              {history.map((history) => (
-                <li className="option" key={history.id}>
-                  {history.name}
-                </li>
-              ))}
-            </ul>
-            <ul id="location-options">
-              {cities.map((city, index) => (
-                <li
-                  className="option"
-                  key={index}
-                  onClick={() => selectCity(city.id, city.name)}
-                >
-                  {city.name}
-                </li>
-              ))}
-              {counties.map((county, index) => (
-                <li
-                  className="option"
-                  key={index}
-                  onClick={() => selectCounty(county.id, county.name)}
-                >
-                  {county.name}
-                </li>
-              ))}
-              {districts.map((district, index) => (
-                <li
-                  className="option"
-                  key={index}
-                  onClick={() => selectDistrict(district.id, district.name)}
-                >
-                  {district.name}
-                </li>
-              ))}
-            </ul>
-          </article>
-        )}
-        {step.count === 3 && (
-          <article id="filters">
-            <div id="filters-content">
-              <div className="filters-line">
-                <hr />
-                <h3>Genel Bilgiler</h3>
-                <hr />
+            </article>
+          )}
+          {step.count === 2 && (
+            <article id="location">
+              <ul id="location-history">
+                {history.map((history) => (
+                  <li className="option" key={history.id}>
+                    {history.name}
+                  </li>
+                ))}
+              </ul>
+              <ul id="location-options">
+                {cities.map((city, index) => (
+                  <li
+                    className="option"
+                    key={index}
+                    onClick={() => selectCity(city.id, city.name)}
+                  >
+                    {city.name}
+                  </li>
+                ))}
+                {counties.map((county, index) => (
+                  <li
+                    className="option"
+                    key={index}
+                    onClick={() => selectCounty(county.id, county.name)}
+                  >
+                    {county.name}
+                  </li>
+                ))}
+                {districts.map((district, index) => (
+                  <li
+                    className="option"
+                    key={index}
+                    onClick={() => selectDistrict(district.id, district.name)}
+                  >
+                    {district.name}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          )}
+          {step.count === 3 && (
+            <article id="filters">
+              <div id="filters-content">
+                <div id="filters-overlay">
+                  <p>
+                    Alpha sürümünde filtre özelliği inaktif durumdadır. İlan Ara
+                    butonu ile sürece devam edebilirsiniz.
+                  </p>
+                </div>
+                <div className="filters-line">
+                  <hr />
+                  <h3>Genel Bilgiler</h3>
+                  <hr />
+                </div>
+                <Control label="Fiyat (düşük)" type="number" rule="₺" />
+                <Control label="Fiyat (yüksek)" type="number" rule="₺" />
+                <Control label="Bina Yaşı" type="number" />
+                <Control label="Aidat" type="number" rule="₺" />
+                <Control label="Oda Sayısı" type="number" />
+                <Control label="Fiyat (düşük)" type="number" rule="₺" />
+                <Control label="Fiyat (yüksek)" type="number" rule="₺" />
+                <Control label="Bina Yaşı" type="number" />
+                <Control label="Aidat" type="number" rule="₺" />
+                <Control label="Oda Sayısı" type="number" />
               </div>
-              <Control label="Fiyat (düşük)" type="number" rule="₺" />
-              <Control label="Fiyat (yüksek)" type="number" rule="₺" />
-              <Control label="Bina Yaşı" type="number" />
-              <Control label="Aidat" type="number" rule="₺" />
-              <Control label="Oda Sayısı" type="number" />
-              <Control label="Fiyat (düşük)" type="number" rule="₺" />
-              <Control label="Fiyat (yüksek)" type="number" rule="₺" />
-              <Control label="Bina Yaşı" type="number" />
-              <Control label="Aidat" type="number" rule="₺" />
-              <Control label="Oda Sayısı" type="number" />
-            </div>
-            <div id="filters-button">
-              <Button text="İlan Ara" onClickHandler={redirectListing}></Button>
-            </div>
-          </article>
-        )}
-        {step.count === 4 && (
-          <Loading
-            title="Size en uygun 
-            ilanları arıyorum.."
-          />
-        )}
-      </div>
-    </section>
+              <div id="filters-button">
+                <Button
+                  text="İlan Ara"
+                  onClickHandler={redirectListing}
+                ></Button>
+              </div>
+            </article>
+          )}
+        </div>
+      </section>
+    </>
   );
 }
 

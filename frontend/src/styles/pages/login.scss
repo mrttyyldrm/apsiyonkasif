@@ -1,8 +1,8 @@
+@use "@/styles/components/text";
+@use "@/styles/components/button";
+@use "@/styles/components/control";
+@use "@/styles/components/information";
 @import "@/styles/color.scss";
-@import "@/styles/components/text";
-@import "@/styles/components/button";
-@import "@/styles/components/control";
-@import "@/styles/components/information";
 
 main {
     section#login {

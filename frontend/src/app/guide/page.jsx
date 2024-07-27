@@ -45,7 +45,7 @@ function Guide() {
     }
   };
 
-  const handleLogged = async () => {
+  const handleIsLogged = async () => {
     try {
       await IsLogged(localStorage.getItem("token"));
     } catch (error) {
@@ -54,7 +54,7 @@ function Guide() {
   };
 
   useEffect(() => {
-    handleLogged();
+    handleIsLogged();
   }, []);
 
   return (

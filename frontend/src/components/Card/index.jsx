@@ -1,35 +1,61 @@
 import React from "react";
 
 function Card(props) {
-  const { image, price, title, city, county, roomType, netArea, advertType } =
-    props.card;
+  const {
+    imageUrl,
+    price,
+    title,
+    cityName,
+    countyName,
+    features,
+    appointmentList,
+  } = props.card;
 
   return (
     <div className="card" onClick={props.onClickHandler}>
       <div className="card-image">
-        <img src={image} />
+        <img src={imageUrl} />
       </div>
       <div className="card-content">
-        <h2>{price} ₺</h2>
+        {price !== undefined && <h2>{price} ₺</h2>}
         <h3>{title}</h3>
         <p>
-          {city}, {county}
+          {cityName}, {countyName}
         </p>
       </div>
-      <ul className="card-features">
-        <li className="feature">
-          <i className="fa-regular fa-grid-2"></i>
-          <p>{roomType}</p>
-        </li>
-        <li className="feature">
-          <i className="fa-regular fa-square-dashed"></i>
-          <p>{netArea} m²</p>
-        </li>
-        <li className="feature">
-          <i className="fa-regular fa-house-blank"></i>
-          <p>{advertType}</p>
-        </li>
-      </ul>
+      {features !== undefined && (
+        <ul className="card-features">
+          {features.roomCount !== null && (
+            <li className="feature">
+              <i className="fa-regular fa-grid-2"></i>
+              <p>{features.roomCount}</p>
+            </li>
+          )}
+          {features.netArea !== null && (
+            <li className="feature">
+              <i className="fa-regular fa-square-dashed"></i>
+              <p>{features.netArea} m²</p>
+            </li>
+          )}
+          {features.advertTypeName !== null && (
+            <li className="feature">
+              <i className="fa-regular fa-house-blank"></i>
+              <p>{features.advertTypeName}</p>
+            </li>
+          )}
+        </ul>
+      )}
+      {appointmentList !== undefined && (
+        <ul className="card-reservations">
+          {appointmentList.map((reservation, index) => (
+            <li className="reservation" key={index}>
+              <p>{reservation.date}</p>
+              <p>{reservation.hours}</p>
+              <h4>{reservation.fullName}</h4>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

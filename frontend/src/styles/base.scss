@@ -32,7 +32,7 @@ main {
     }
 }
 
-@media screen and (min-width: 440px) {
+@media screen and (min-width: 468px) {
     body {
         display: flex;
         justify-content: center;
@@ -41,5 +41,7 @@ main {
     main {
         max-width: 39.3rem;
         max-height: 85.2rem;
+        border-radius: 2rem;
+        border: 0.5rem solid $white;
     }
 }

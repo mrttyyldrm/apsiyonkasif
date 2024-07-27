@@ -8,7 +8,7 @@ import Error from "@/components/Error";
 import Control from "@/components/Control";
 import Bar from "@/components/Bar";
 import Card from "@/components/Card";
-import { IsLogged, FilterWithId } from "@/api";
+import { IsLogged, ListAdverts } from "@/api";
 import { useRouter } from "next/navigation";
 
 function Listing() {
@@ -30,9 +30,9 @@ function Listing() {
     }
   };
 
-  const handleFilterWithId = async (query) => {
+  const handleListAdverts = async (query) => {
     try {
-      const data = await FilterWithId(query);
+      const data = await ListAdverts(query);
       setCards(data);
       setIsLoading(false);
     } catch (error) {
@@ -44,7 +44,7 @@ function Listing() {
   };
 
   const redirectDetails = (id) => {
-    router.push(`/detail/${id}`);
+    router.push(`/detail?id=${id}`);
   };
 
   const searchAds = (value) => {
@@ -68,7 +68,7 @@ function Listing() {
 
   useEffect(() => {
     handleIsLogged();
-    handleFilterWithId(location.href.split("?")[1]);
+    handleListAdverts(location.href.split("?")[1]);
   }, []);
 
   return (
@@ -91,17 +91,26 @@ function Listing() {
             />
           </div>
           <div id="listing-content">
-            {filteredCards.map((card, index) => (
-              <Card
-                key={index}
-                card={card}
-                onClickHandler={() => redirectDetails(card.id)}
-              ></Card>
-            ))}
+            {filteredCards.length === 0 ? (
+              <div id="listing-empty">
+                <i className="fa-light fa-circle-question"></i>
+                <p>İlan Bulunamadı</p>
+              </div>
+            ) : (
+              filteredCards.map((card, index) => (
+                <Card
+                  key={index}
+                  card={card}
+                  onClickHandler={() => redirectDetails(card.id)}
+                ></Card>
+              ))
+            )}
           </div>
-          <div id="listing-information">
-            <Information text="Arama kriterlerinize göre en uygun ilanları listeledim!" />
-          </div>
+          {filteredCards.length !== 0 && (
+            <div id="listing-information">
+              <Information text="Arama kriterlerinize göre en uygun ilanları listeledim!" />
+            </div>
+          )}
         </section>
       )}
     </>

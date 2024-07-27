@@ -38,7 +38,7 @@ export const IsLogged = async (token) => {
 
 export const GetCity = async () => {
     try {
-        const response = await API.get("/City", {
+        const response = await API.get("/City/Cities", {
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("token")
             },
@@ -75,9 +75,35 @@ export const GetDistrict = async (id) => {
     }
 };
 
-export const FilterWithId = async (query) => {
+export const ListAdverts = async (query) => {
     try {
-        const response = await API.get(`/Advert/AdvertFilterWithId?${query}`, {
+        const response = await API.get(`/Advert/AdvertDetailWithId?${query}`, {
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem("token")
+            },
+        });
+        return response.data;
+    } catch (error) {
+        throw error.response.data;
+    }
+};
+
+export const GetAdDetail = async (id) => {
+    try {
+        const response = await API.get(`/Advert/AdvertDetail?advertId=${id}`, {
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem("token")
+            },
+        });
+        return response.data;
+    } catch (error) {
+        throw error.response.data;
+    }
+};
+
+export const GetReservation = async (id) => {
+    try {
+        const response = await API.get("/Appointment/AdvertWithAppointments", {
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("token")
             },

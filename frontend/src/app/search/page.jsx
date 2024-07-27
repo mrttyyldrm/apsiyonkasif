@@ -175,13 +175,13 @@ function Search() {
             <article id="type">
               <div className="type" onClick={() => selectType(1)}>
                 <div className="type-icon">
-                  <i className="fa-solid fa-house-flag"></i>
+                  <i className="fa-regular fa-house-flag"></i>
                 </div>
                 <h2>Satılık İlanlar</h2>
               </div>
               <div className="type" onClick={() => selectType(2)}>
                 <div className="type-icon">
-                  <i className="fa-solid fa-house-chimney-user"></i>
+                  <i className="fa-regular fa-house-chimney-user"></i>
                 </div>
                 <h2>Kiralık İlanlar</h2>
               </div>

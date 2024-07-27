@@ -1,0 +1,470 @@
+@use "@/styles/components/bar";
+@use "@/styles/components/control";
+@use "@/styles/components/information";
+@use "@/styles/components/button";
+@use "@/styles/components/text";
+@import "@/styles/color.scss";
+
+main {
+    section#virtual {
+        z-index: 100;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $greySoft;
+
+        #virtual-return {
+            z-index: 2;
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            width: 4.8rem;
+            height: 4.8rem;
+            border-radius: 0.8rem;
+            background-color: $primary;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            i {
+                font-size: 1.8rem;
+                color: $white;
+            }
+        }
+
+        #virtual-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            iframe {
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
+        }
+
+        #virtual-information {
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            width: calc(100% - 4rem);
+            @extend %information;
+        }
+    }
+
+    section#detail {
+        padding: 0;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        gap: 3rem;
+
+        #detail-bar {
+            margin: 3rem 3rem 0 3rem;
+            @extend %bar;
+        }
+
+        #detail-content {
+            overflow-y: auto;
+            padding: 0 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+
+            article {
+                background-color: $white;
+                border-radius: 1rem;
+
+                h3 {
+                    padding: 2rem 2rem 0 2rem;
+                    font-size: 1.8rem;
+                    font-weight: 800;
+                    color: $black;
+                }
+            }
+
+            article#detail-images {
+                position: relative;
+                background-color: transparent;
+                border: 0;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                align-items: center;
+                gap: 1rem;
+
+                #images-tour {
+                    z-index: 2;
+                    position: absolute;
+                    top: 2rem;
+                    right: 2rem;
+                    width: 4.8rem;
+                    height: 4.8rem;
+                    border: 0.3rem solid $white;
+                    border-radius: 0.8rem;
+                    background-color: $primary;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    i {
+                        font-size: 1.8rem;
+                        color: $white;
+                    }
+                }
+
+                .image {
+                    aspect-ratio: 16 / 9;
+
+                    &.showcase {
+                        grid-column: 1 / span 2;
+                    }
+
+                    img {
+                        border: 0.3rem solid $white;
+                        border-radius: 0.8rem;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+            }
+
+            article#detail-summary {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+
+                h1 {
+                    padding: 2rem 2rem 0 2rem;
+                    font-size: 3.2rem;
+                    font-weight: 700;
+                    color: $black;
+                }
+
+                hr {
+                    border: none;
+                    outline: none;
+                    height: 0.1rem;
+                    background-color: $greySoft;
+                }
+
+                h2 {
+                    padding: 0 2rem;
+                    font-size: 2rem;
+                    font-weight: 800;
+                    line-height: 1.3;
+                    color: $black;
+                }
+
+                p {
+                    padding: 0 2rem 2rem 2rem;
+                    @extend %text;
+                }
+            }
+
+            article#detail-properties {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                #properties-list {
+                    padding-bottom: 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+
+                    li.property {
+                        padding: 0 2rem 1rem 2rem;
+                        border-bottom: 0.1rem solid $greySoft;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 2rem;
+
+                        &:last-child {
+                            padding-bottom: 0;
+                            border-bottom: 0;
+                        }
+
+                        p,
+                        h4 {
+                            @extend %text;
+                            font-size: 1.4rem;
+                        }
+
+                        h4 {
+                            font-weight: 700;
+                            color: $black;
+                        }
+                    }
+                }
+            }
+
+            article#detail-invoices {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                #invoices-list {
+                    padding-bottom: 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+
+                    li.invoice {
+                        padding: 0 2rem 1rem 2rem;
+                        border-bottom: 0.1rem solid $greySoft;
+                        display: grid;
+                        grid-template-columns: auto 1fr auto;
+                        align-items: center;
+                        gap: 1rem;
+
+                        &:last-child {
+                            padding-bottom: 0;
+                            border-bottom: 0;
+                        }
+
+                        .invoice-icon {
+                            width: 4rem;
+                            height: 4rem;
+                            border-radius: 50%;
+                            background-color: $primary;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            i {
+                                font-size: 1.6rem;
+                                color: $white;
+                            }
+                        }
+
+                        p,
+                        h4 {
+                            @extend %text;
+                        }
+
+                        p {
+                            font-size: 1.4rem;
+                        }
+
+                        h4 {
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-end;
+                            gap: 0.25rem;
+                            font-weight: 800;
+                            color: $black;
+
+                            span {
+                                font-size: 1.2rem;
+                                font-weight: 500;
+                                line-height: 1.65;
+                                color: $grey;
+                            }
+                        }
+                    }
+                }
+            }
+
+            article#detail-map {
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                h3 {
+                    padding: 0;
+                }
+
+                iframe {
+                    aspect-ratio: 1 / 1;
+                    border: none;
+                    outline: none;
+                    border-radius: 0.8rem;
+                }
+            }
+
+            article#detail-history {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                #history-list {
+                    padding-bottom: 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+
+                    li.history {
+                        padding: 0 2rem 1rem 2rem;
+                        border-bottom: 0.1rem solid $greySoft;
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        align-items: center;
+                        gap: 0.3rem 1rem;
+
+                        &:last-child {
+                            padding-bottom: 0;
+                            border-bottom: 0;
+                        }
+
+                        p,
+                        h4,
+                        h5 {
+                            @extend %text;
+                        }
+
+                        p {
+                            font-size: 1.4rem;
+
+                            &:nth-child(2) {
+                                text-align: right;
+                            }
+                        }
+
+                        h4,
+                        h5 {
+                            font-weight: 800;
+                            color: $black;
+                        }
+
+                        h4 {
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+
+            article#detail-services {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                #services-list {
+                    padding: 0 2rem 2rem 2rem;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    align-items: center;
+                    gap: 1rem;
+
+                    li.service {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 0.75rem;
+
+                        i {
+                            font-size: 1.6rem;
+                            color: $primary;
+                        }
+
+                        h4 {
+                            @extend %text;
+                            font-weight: 800;
+                            color: $black;
+                        }
+
+                    }
+                }
+            }
+
+            article#detail-owner {
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+
+                h3 {
+                    padding: 0;
+                }
+
+                #owner-content {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 1.5rem;
+
+                    #owner-image {
+                        img {
+                            width: 5.5rem;
+                            height: 5.5rem;
+                            border-radius: 1rem;
+                        }
+                    }
+
+                    #owner-information {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.5rem;
+
+                        h4 {
+                            font-size: 1.8rem;
+                            font-weight: 800;
+                            color: $black;
+                        }
+
+                        #owner-contact {
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            gap: 0.5rem;
+
+                            i {
+                                font-size: 1.5rem;
+                                color: $grey;
+                            }
+
+                            p {
+                                @extend %text;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+
+                #services-list {
+                    padding: 0 2rem 2rem 2rem;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    align-items: center;
+                    gap: 1rem;
+
+                    li.service {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 0.75rem;
+
+                        i {
+                            font-size: 1.6rem;
+                            color: $primary;
+                        }
+
+                        h4 {
+                            @extend %text;
+                            font-weight: 800;
+                            color: $black;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        #detail-button {
+            background-color: $primary;
+            border-radius: 4rem 4rem 0 0;
+            padding: 3rem;
+
+            button {
+                @extend %button;
+            }
+        }
+    }
+}

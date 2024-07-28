@@ -19,14 +19,19 @@ namespace ApsiyonKasif.Service.Services
             _advertRepository = advertRepository;
         }
 
-        public async Task<Advert> AdvertDetail(int advertId)
+        public async Task<List<AdvertCartDto>> AdvertDetailWithId(int advertTypeId, int cityId, int countyId, int districtId)
         {
-            return await _advertRepository.AdvertDetail(advertId);
+            return await _advertRepository.AdvertDetailWithId(advertTypeId, cityId, countyId, districtId);
         }
 
-        public async Task<List<Advert>> AdvertFilter(AdvertFilterDto filter)
+        public async Task<Advert> CreateAdvert(CreateAdvertDto create)
         {
-            return await _advertRepository.AdvertFilter(filter);
+            return await _advertRepository.CreateAdvert(create);
+        }
+
+        public async Task<AdvertDetailDto> GetAdvertDetails(int advertId)
+        {
+            return await _advertRepository.GetAdvertDetails(advertId);
         }
     }
 }

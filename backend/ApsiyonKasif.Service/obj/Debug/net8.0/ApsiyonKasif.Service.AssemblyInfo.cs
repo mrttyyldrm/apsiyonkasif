@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApsiyonKasif.Service")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+732487e57fe44106df894dedab7a00f8269d13cf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+932059425940b960295c24a47972097f313be701")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApsiyonKasif.Service")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApsiyonKasif.Service")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

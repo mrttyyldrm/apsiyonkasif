@@ -1,5 +1,7 @@
-﻿using System;
+﻿using ApsiyonKasif.Core.DTOs.ResponseDto;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Text.Json.Serialization;
@@ -10,15 +12,22 @@ namespace ApsiyonKasif.Core.Entities
     public class Appointment
     {
         public int Id { get; set; }
-        public DateTime AppointmentDate { get; set; }
+
+        public DateOnly Date { get; set; }
 
 
         [JsonIgnore]
+        public TimeSpan Hours { get; set; }
+        public bool IsScheduled { get; set; }
+
+        public string? AppUserId { get; set; }
+
+        //[JsonIgnore]
         public AppUser AppUser { get; set; }
-
-        public int OwnerId { get; set; }
+        
+        public int AdvertId { get; set; }
 
         [JsonIgnore]
-        public Owner Owner { get; set; }
+        public Advert Advert { get; set; }
     }
 }

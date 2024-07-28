@@ -13,13 +13,10 @@ namespace ApsiyonKasif.Core.Entities
         public int Id { get; set; }
         public string Name { get; set; }
 
-        [Column(TypeName = "decimal(8,6)")]
-        public decimal Longitude { get; set; }
-
-        [Column(TypeName = "decimal(8,6)")]
-        public decimal Latitude { get; set; }
-
         [JsonIgnore]
         public ICollection<Apartment> Apartment { get; set; }
+
+        [JsonIgnore]
+        public ICollection<BuildingComplexService> BuildingComplexServices { get; set; }
     }
 }

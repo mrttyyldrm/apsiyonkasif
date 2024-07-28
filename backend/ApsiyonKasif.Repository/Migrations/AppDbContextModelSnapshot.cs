@@ -36,10 +36,6 @@ namespace ApsiyonKasif.Repository.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("HomeId")
                         .HasColumnType("int");
 
@@ -48,6 +44,9 @@ namespace ApsiyonKasif.Repository.Migrations
 
                     b.Property<string>("Title")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TourUrl")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -109,12 +108,6 @@ namespace ApsiyonKasif.Repository.Migrations
                     b.Property<int>("HeatingTypeId")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("Latitude")
-                        .HasColumnType("decimal(8,6)");
-
-                    b.Property<decimal>("Longitude")
-                        .HasColumnType("decimal(8,6)");
-
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
@@ -161,6 +154,9 @@ namespace ApsiyonKasif.Repository.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("IdentityNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("LockoutEnabled")
@@ -223,20 +219,26 @@ namespace ApsiyonKasif.Repository.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("AdvertId")
+                        .HasColumnType("int");
+
                     b.Property<string>("AppUserId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<DateTime>("AppointmentDate")
-                        .HasColumnType("datetime2");
+                    b.Property<DateOnly>("Date")
+                        .HasColumnType("date");
 
-                    b.Property<int>("OwnerId")
-                        .HasColumnType("int");
+                    b.Property<TimeSpan>("Hours")
+                        .HasColumnType("time");
+
+                    b.Property<bool>("IsScheduled")
+                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AppUserId");
+                    b.HasIndex("AdvertId");
 
-                    b.HasIndex("OwnerId");
+                    b.HasIndex("AppUserId");
 
                     b.ToTable("Appointments");
                 });
@@ -249,12 +251,6 @@ namespace ApsiyonKasif.Repository.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<decimal>("Latitude")
-                        .HasColumnType("decimal(8,6)");
-
-                    b.Property<decimal>("Longitude")
-                        .HasColumnType("decimal(8,6)");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -262,6 +258,29 @@ namespace ApsiyonKasif.Repository.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("BuildingComplexes");
+                });
+
+            modelBuilder.Entity("ApsiyonKasif.Core.Entities.BuildingComplexService", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("BuildingComplexId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ServiceId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BuildingComplexId");
+
+                    b.HasIndex("ServiceId");
+
+                    b.ToTable("BuildingComplexServices");
                 });
 
             modelBuilder.Entity("ApsiyonKasif.Core.Entities.City", b =>
@@ -353,21 +372,24 @@ namespace ApsiyonKasif.Repository.Migrations
                     b.Property<int>("ApartmentId")
                         .HasColumnType("int");
 
-                    b.Property<int>("BathroomCount")
+                    b.Property<int>("BathromCount")
                         .HasColumnType("int");
 
                     b.Property<string>("Direction")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("DoorNumber")
-                        .HasColumnType("int");
+                    b.Property<string>("DoorNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Floor")
-                        .HasColumnType("int");
+                    b.Property<string>("Floor")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("GrossArea")
-                        .HasColumnType("int");
+                    b.Property<string>("GrossArea")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("HasBalcony")
                         .HasColumnType("bit");
@@ -381,11 +403,16 @@ namespace ApsiyonKasif.Repository.Migrations
                     b.Property<decimal>("Longitude")
                         .HasColumnType("decimal(8,6)");
 
-                    b.Property<int>("NetArea")
-                        .HasColumnType("int");
+                    b.Property<string>("NetArea")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("RoomCountId")
                         .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -432,6 +459,10 @@ namespace ApsiyonKasif.Repository.Migrations
                     b.Property<int>("HomeId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Icon")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("InvoiceTypeId")
                         .HasColumnType("int");
 
@@ -469,10 +500,7 @@ namespace ApsiyonKasif.Repository.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("AppUserId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("AppUserId1")
+                    b.Property<string>("AppUserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
@@ -481,9 +509,10 @@ namespace ApsiyonKasif.Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AppUserId1");
+                    b.HasIndex("AppUserId");
 
-                    b.HasIndex("HomeId");
+                    b.HasIndex("HomeId")
+                        .IsUnique();
 
                     b.ToTable("Owners");
                 });
@@ -505,6 +534,23 @@ namespace ApsiyonKasif.Repository.Migrations
                     b.ToTable("RoomCount");
                 });
 
+            modelBuilder.Entity("ApsiyonKasif.Core.Entities.Service", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Services");
+                });
+
             modelBuilder.Entity("ApsiyonKasif.Core.Entities.Tenant", b =>
                 {
                     b.Property<int>("Id")
@@ -513,22 +559,31 @@ namespace ApsiyonKasif.Repository.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("AppUserId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("AppUserId1")
+                    b.Property<string>("AppUserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("Duration")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("HomeId")
                         .HasColumnType("int");
 
+                    b.Property<bool>("IsOccupied")
+                        .HasColumnType("bit");
+
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("AppUserId1");
+                    b.HasIndex("AppUserId");
 
                     b.HasIndex("HomeId");
 
@@ -714,19 +769,38 @@ namespace ApsiyonKasif.Repository.Migrations
 
             modelBuilder.Entity("ApsiyonKasif.Core.Entities.Appointment", b =>
                 {
-                    b.HasOne("ApsiyonKasif.Core.Entities.AppUser", "AppUser")
-                        .WithMany()
-                        .HasForeignKey("AppUserId");
-
-                    b.HasOne("ApsiyonKasif.Core.Entities.Owner", "Owner")
+                    b.HasOne("ApsiyonKasif.Core.Entities.Advert", "Advert")
                         .WithMany("Appointments")
-                        .HasForeignKey("OwnerId")
+                        .HasForeignKey("AdvertId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("AppUser");
+                    b.HasOne("ApsiyonKasif.Core.Entities.AppUser", "AppUser")
+                        .WithMany("Appointments")
+                        .HasForeignKey("AppUserId");
 
-                    b.Navigation("Owner");
+                    b.Navigation("Advert");
+
+                    b.Navigation("AppUser");
+                });
+
+            modelBuilder.Entity("ApsiyonKasif.Core.Entities.BuildingComplexService", b =>
+                {
+                    b.HasOne("ApsiyonKasif.Core.Entities.BuildingComplex", "BuildingComplex")
+                        .WithMany("BuildingComplexServices")
+                        .HasForeignKey("BuildingComplexId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ApsiyonKasif.Core.Entities.Service", "Service")
+                        .WithMany("BuildingComplexServices")
+                        .HasForeignKey("ServiceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("BuildingComplex");
+
+                    b.Navigation("Service");
                 });
 
             modelBuilder.Entity("ApsiyonKasif.Core.Entities.County", b =>
@@ -804,13 +878,13 @@ namespace ApsiyonKasif.Repository.Migrations
                 {
                     b.HasOne("ApsiyonKasif.Core.Entities.AppUser", "AppUser")
                         .WithMany()
-                        .HasForeignKey("AppUserId1")
+                        .HasForeignKey("AppUserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("ApsiyonKasif.Core.Entities.Home", "Home")
-                        .WithMany()
-                        .HasForeignKey("HomeId")
+                        .WithOne("Owner")
+                        .HasForeignKey("ApsiyonKasif.Core.Entities.Owner", "HomeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -823,12 +897,12 @@ namespace ApsiyonKasif.Repository.Migrations
                 {
                     b.HasOne("ApsiyonKasif.Core.Entities.AppUser", "AppUser")
                         .WithMany()
-                        .HasForeignKey("AppUserId1")
+                        .HasForeignKey("AppUserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("ApsiyonKasif.Core.Entities.Home", "Home")
-                        .WithMany()
+                        .WithMany("Tenants")
                         .HasForeignKey("HomeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -889,6 +963,11 @@ namespace ApsiyonKasif.Repository.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("ApsiyonKasif.Core.Entities.Advert", b =>
+                {
+                    b.Navigation("Appointments");
+                });
+
             modelBuilder.Entity("ApsiyonKasif.Core.Entities.AdvertType", b =>
                 {
                     b.Navigation("Adverts");
@@ -899,9 +978,16 @@ namespace ApsiyonKasif.Repository.Migrations
                     b.Navigation("Home");
                 });
 
+            modelBuilder.Entity("ApsiyonKasif.Core.Entities.AppUser", b =>
+                {
+                    b.Navigation("Appointments");
+                });
+
             modelBuilder.Entity("ApsiyonKasif.Core.Entities.BuildingComplex", b =>
                 {
                     b.Navigation("Apartment");
+
+                    b.Navigation("BuildingComplexServices");
                 });
 
             modelBuilder.Entity("ApsiyonKasif.Core.Entities.City", b =>
@@ -932,6 +1018,11 @@ namespace ApsiyonKasif.Repository.Migrations
                     b.Navigation("HomeImages");
 
                     b.Navigation("Invoices");
+
+                    b.Navigation("Owner")
+                        .IsRequired();
+
+                    b.Navigation("Tenants");
                 });
 
             modelBuilder.Entity("ApsiyonKasif.Core.Entities.InvoiceType", b =>
@@ -939,14 +1030,14 @@ namespace ApsiyonKasif.Repository.Migrations
                     b.Navigation("Invoices");
                 });
 
-            modelBuilder.Entity("ApsiyonKasif.Core.Entities.Owner", b =>
-                {
-                    b.Navigation("Appointments");
-                });
-
             modelBuilder.Entity("ApsiyonKasif.Core.Entities.RoomCount", b =>
                 {
                     b.Navigation("Homes");
+                });
+
+            modelBuilder.Entity("ApsiyonKasif.Core.Entities.Service", b =>
+                {
+                    b.Navigation("BuildingComplexServices");
                 });
 #pragma warning restore 612, 618
         }

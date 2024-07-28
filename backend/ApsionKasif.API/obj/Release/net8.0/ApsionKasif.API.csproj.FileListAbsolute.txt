@@ -151,3 +151,7 @@ C:\Users\sekii\source\repos\ApsionKasif.App\ApsionKasif.API\obj\Release\net8.0\r
 C:\Users\sekii\source\repos\ApsionKasif.App\ApsionKasif.API\obj\Release\net8.0\ApsionKasif.API.pdb
 C:\Users\sekii\source\repos\ApsionKasif.App\ApsionKasif.API\obj\Release\net8.0\ApsionKasif.API.genruntimeconfig.cache
 C:\Users\sekii\source\repos\ApsionKasif.App\ApsionKasif.API\obj\Release\net8.0\ref\ApsionKasif.API.dll
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsionKasif.API\bin\Release\net8.0\Scrutor.dll
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsionKasif.API\bin\Release\net8.0\Swashbuckle.AspNetCore.Filters.dll
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsionKasif.API\bin\Release\net8.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsionKasif.API\obj\Release\net8.0\ApsionKasif.API.sourcelink.json

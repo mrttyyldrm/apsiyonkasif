@@ -8,6 +8,7 @@ using ApsiyonKasif.Service.Services;
 using Autofac;
 using Module = Autofac.Module;
 using System.Reflection;
+using ApsiyonKasif.Service.Mapping;
 
 namespace ApsionKasif.API.Modules
 {
@@ -21,7 +22,7 @@ namespace ApsionKasif.API.Modules
 
             var apiAssembly = Assembly.GetExecutingAssembly();
             var repoAssembly = Assembly.GetAssembly(typeof(AppDbContext))!;
-            var serviceAssembly = Assembly.GetAssembly(typeof(IGenericService<>))!;
+            var serviceAssembly = Assembly.GetAssembly(typeof(MapProfile))!;
 
             builder.RegisterAssemblyTypes(apiAssembly, repoAssembly, serviceAssembly).Where(x => x.Name.EndsWith("Repository")).AsImplementedInterfaces().InstancePerLifetimeScope();
 

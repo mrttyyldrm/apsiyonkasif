@@ -15,3 +15,4 @@ C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Service\obj\Debug\net8.
 C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Service\obj\Debug\net8.0\refint\ApsiyonKasif.Service.dll
 C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Service\obj\Debug\net8.0\ApsiyonKasif.Service.pdb
 C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Service\obj\Debug\net8.0\ref\ApsiyonKasif.Service.dll
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Service\obj\Debug\net8.0\ApsiyonKasif.Service.sourcelink.json

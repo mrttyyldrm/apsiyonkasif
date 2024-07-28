@@ -1,5 +1,7 @@
-﻿using System;
+﻿using ApsiyonKasif.Core.DTOs.ResponseDto;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Text.Json.Serialization;
@@ -14,13 +16,9 @@ namespace ApsiyonKasif.Core.Entities
 
         [JsonIgnore]
         public Home Home { get; set; }
-        public int AppUserId { get; set; }
+        public string AppUserId { get; set; }
 
         [JsonIgnore]
         public AppUser AppUser { get; set; }
-
-
-        [JsonIgnore]
-        public ICollection<Appointment> Appointments { get; set; }
     }
 }

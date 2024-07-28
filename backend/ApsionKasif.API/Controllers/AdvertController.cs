@@ -24,26 +24,26 @@ namespace ApsionKasif.API.Controllers
             _httpContextAccessor = httpContextAccessor;
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Advert(CreateAdvertDto advertDto)
-        {
-            var advert = _mapper.Map<Advert>(advertDto);
-            await _advertService.AddAsync(advert);
-            return Ok("Added");
-        }
-
         [HttpGet]
-        [Route("AdvertFilter")]
-        public async Task<IActionResult> AdvertFilter([FromQuery] AdvertFilterDto filter)
+        [Route("AdvertDetailWithId")]
+        public async Task<IActionResult> AdvertDetailWithId(int advertTypeId, int cityId, int countyId, int districtId)
         {
-            return Ok(await _advertService.AdvertFilter(filter));
+            return Ok(await _advertService.AdvertDetailWithId(advertTypeId, cityId, countyId, districtId));
         }
 
         [HttpGet]
         [Route("AdvertDetail")]
         public async Task<IActionResult> AdvertDetail(int advertId)
         {
-            return Ok(await _advertService.AdvertDetail(advertId));
+            return Ok(await _advertService.GetAdvertDetails(advertId));
+        }
+
+        [HttpPost]
+        [Route("CreateAdvert")]
+        public async Task<IActionResult> CreateAdvert(CreateAdvertDto createAdvertDto)
+        {
+            await _advertService.CreateAdvert(createAdvertDto);
+            return Ok("Added");
         }
     }
 }

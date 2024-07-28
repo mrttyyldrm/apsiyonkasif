@@ -10,3 +10,4 @@ C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Core\obj\Debug\net8.0\A
 C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Core\obj\Debug\net8.0\refint\ApsiyonKasif.Core.dll
 C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Core\obj\Debug\net8.0\ApsiyonKasif.Core.pdb
 C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Core\obj\Debug\net8.0\ref\ApsiyonKasif.Core.dll
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Core\obj\Debug\net8.0\ApsiyonKasif.Core.sourcelink.json

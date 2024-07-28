@@ -10,7 +10,8 @@ namespace ApsiyonKasif.Core.Repositories
 {
     public interface IAdvertRepository : IGenericRepository<Advert>
     {
-        Task<List<Advert>> AdvertFilter(AdvertFilterDto filter);
-        Task<Advert> AdvertDetail(int advertId);
+        Task<List<AdvertCartDto>> AdvertDetailWithId(int advertTypeId, int cityId, int countyId, int districtId);
+        Task<AdvertDetailDto> GetAdvertDetails(int advertId);
+        Task<Advert> CreateAdvert(CreateAdvertDto create);
     }
 }

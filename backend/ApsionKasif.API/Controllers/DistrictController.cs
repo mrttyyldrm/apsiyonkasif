@@ -23,5 +23,12 @@ namespace ApsionKasif.API.Controllers
         {
             return Ok(await _districtService.GetDistrictDetailsAsync(districtId));
         }
+
+        [HttpGet]
+        [Route("{countyId}")]
+        public async Task<IActionResult> GetDistrictsByCountyId(int countyId)
+        {
+            return Ok(await _districtService.GetDistrictsByCountId(countyId));
+        }
     }
 }

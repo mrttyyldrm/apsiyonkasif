@@ -28,5 +28,12 @@ namespace ApsiyonKasif.Repository.Repositories
                         .ThenInclude(d => d.Counties)
                 .FirstOrDefaultAsync())!;
         }
+
+        public async Task<List<District>> GetDistrictsByCountId(int countyId)
+        {
+            return await _context.Districts
+                .Where(x=>x.CountyId == countyId)
+                .ToListAsync();
+        }
     }
 }

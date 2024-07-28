@@ -22,5 +22,10 @@ namespace ApsiyonKasif.Service.Services
         {
             return await _districtRepository.GetDistrictDetailsAsync(districtId);
         }
+
+        public async Task<List<District>> GetDistrictsByCountId(int countyId)
+        {
+            return await _districtRepository.GetDistrictsByCountId(countyId);
+        }
     }
 }

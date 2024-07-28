@@ -15,3 +15,4 @@ C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Repository\obj\Release\
 C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Repository\obj\Release\net8.0\ApsiyonKasif.Repository.pdb
 C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Repository\obj\Release\net8.0\ApsiyonKasif.Repository.genruntimeconfig.cache
 C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Repository\obj\Release\net8.0\ref\ApsiyonKasif.Repository.dll
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsiyonKasif.Repository\obj\Release\net8.0\ApsiyonKasif.Repository.sourcelink.json

@@ -22,6 +22,7 @@ namespace ApsiyonKasif.Repository.Context
         public DbSet<Apartment> Apartments { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
         public DbSet<BuildingComplex> BuildingComplexes { get; set; }
+        public DbSet<BuildingComplexService> BuildingComplexServices { get; set; }
         public DbSet<City> Cities { get; set; }
         public DbSet<County> Counties { get; set; }
         public DbSet<District> Districts { get; set; }
@@ -32,5 +33,6 @@ namespace ApsiyonKasif.Repository.Context
         public DbSet<Home> Homes { get; set; }
         public DbSet<Owner> Owners { get; set; }
         public DbSet<Tenant> Tenants { get; set; }
+        public DbSet<Service> Services { get; set; }
     }
 }

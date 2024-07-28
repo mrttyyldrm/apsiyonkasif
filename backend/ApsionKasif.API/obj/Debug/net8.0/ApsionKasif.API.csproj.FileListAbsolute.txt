@@ -87,7 +87,6 @@ C:\Users\sekii\source\repos\ApsionKasif.App\ApsionKasif.API\obj\Debug\net8.0\Aps
 C:\Users\sekii\source\repos\ApsionKasif.App\ApsionKasif.API\obj\Debug\net8.0\ApsionKasif.API.AssemblyInfoInputs.cache
 C:\Users\sekii\source\repos\ApsionKasif.App\ApsionKasif.API\obj\Debug\net8.0\ApsionKasif.API.AssemblyInfo.cs
 C:\Users\sekii\source\repos\ApsionKasif.App\ApsionKasif.API\obj\Debug\net8.0\ApsionKasif.API.csproj.CoreCompileInputs.cache
-C:\Users\sekii\source\repos\ApsionKasif.App\ApsionKasif.API\obj\Debug\net8.0\ApsionKasif.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\sekii\source\repos\ApsionKasif.App\ApsionKasif.API\obj\Debug\net8.0\ApsionKasif.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\sekii\source\repos\ApsionKasif.App\ApsionKasif.API\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\sekii\source\repos\ApsionKasif.App\ApsionKasif.API\obj\Debug\net8.0\staticwebassets.development.json
@@ -154,3 +153,5 @@ C:\Users\sekii\source\repos\ApsionKasif.App\ApsionKasif.API\bin\Debug\net8.0\Aut
 C:\Users\sekii\source\repos\ApsionKasif.App\ApsionKasif.API\bin\Debug\net8.0\Scrutor.dll
 C:\Users\sekii\source\repos\ApsionKasif.App\ApsionKasif.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.Filters.dll
 C:\Users\sekii\source\repos\ApsionKasif.App\ApsionKasif.API\bin\Debug\net8.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsionKasif.API\obj\Debug\net8.0\ApsionKasif.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\sekii\source\repos\ApsionKasif.App\ApsionKasif.API\obj\Debug\net8.0\ApsionKasif.API.sourcelink.json

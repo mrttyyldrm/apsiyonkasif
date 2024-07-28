@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ApsiyonKasif.Core.DTOs.RequestDto
 {
-    public class RegisterDto
+    public record RegisterDto
     {
         public string? UserName { get; set; }
         public string? Email { get; set; }

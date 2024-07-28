@@ -8,19 +8,20 @@
 import SwiftUI
 
 struct SearchDistrict: View {
-    var selectedCity: String?
-    @State private var selectedDistrict: String? = nil
+    var selectedCityName: String?
+    var selectedCityID: Int?
+    
+    @State private var selectedDistrict: District? = nil
     @State private var navigateToNeighborhood = false
     
-    let districties = ["Merkez", "Tavşanlı", "Simav", "Gediz", "Çavdarhisar", "Dumlupınar", "Emet"]
+    @StateObject private var viewModel = DistrictViewModel()
     
     var body: some View {
-        
-        ZStack{
+        ZStack {
             Color.bg
                 .ignoresSafeArea()
             
-            SearchHeader(value: 0.8, text: "Pekala, arama yapmak istediğin\nlokasyon nedir?")
+            SearchHeader(value: 0.6, text: "Pekala, arama yapmak istediğin\nlokasyon nedir?")
                 .padding(.bottom, 100)
             
             VStack {
@@ -32,61 +33,75 @@ struct SearchDistrict: View {
                     .foregroundColor(.titleBlue)
                 
                 VStack {
-                    Text(selectedCity ?? "")
+                    Text(selectedCityName ?? "")
                         .font(.customFont(.extraBold, fontSize: 16))
                         .foregroundColor(.bgBlue)
                         .maxLeft
                         .padding(20)
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.btnBlue, lineWidth: 5) // Adjust color and thickness here
+                                .stroke(Color.btnBlue, lineWidth: 5)
                         )
                         .cornerRadius(10)
                         .background(
                             Color.bgBlue
-                                .opacity(0.1) // Set your desired opacity here
+                                .opacity(0.1)
                                 .cornerRadius(10)
                         )
-                        .padding(.bottom, 30)
+                        .padding(.bottom, 20)
                 }
                 .padding(.horizontal, 30)
                 
-                
-                ScrollView {
-                    VStack(spacing: 20) {
-                        ForEach(districties, id: \.self) { district in
-                            Button(action: {
-                                selectedDistrict = district
-                                navigateToNeighborhood = true
-                            }) {
-                                Text(district)
-                                    .font(.customFont(.extraBold, fontSize: 16))
-                                    .maxLeft
-                                    .padding(20)
-                                    .background(selectedDistrict == district ? Color.bgBlue : Color.customWhite)
-                                    .foregroundColor(selectedDistrict == district ? .customWhite : .titleBlue)
-                                    .cornerRadius(10)
+                if viewModel.isLoading {
+                    ProgressView()
+                        .padding(.top, 20)
+                } else if let errorMessage = viewModel.errorMessage {
+                    Text("Error: \(errorMessage)")
+                        .foregroundColor(.red)
+                        .padding(.top, 20)
+                } else {
+                    ScrollView {
+                        VStack(spacing: 20) {
+                            ForEach(viewModel.districts) { district in
+                                Button(action: {
+                                    selectedDistrict = district
+                                    
+                                    UserDefaults.standard.set(district.id, forKey: "districtId")
+                                    navigateToNeighborhood = true
+                                }) {
+                                    Text(district.name)
+                                        .font(.customFont(.extraBold, fontSize: 16))
+                                        .maxLeft
+                                        .padding(20)
+                                        .background(selectedDistrict?.id == district.id ? Color.bgBlue : Color.customWhite)
+                                        .foregroundColor(selectedDistrict?.id == district.id ? .customWhite : .titleBlue)
+                                        .cornerRadius(10)
+                                }
+                                .buttonStyle(PlainButtonStyle())
                             }
-                            .buttonStyle(PlainButtonStyle())
                         }
+                        .padding(.horizontal, 30)
                     }
-                    .padding(.horizontal, 30)
                 }
                 
                 Spacer()
                 
-                // NavigationLink for navigation to NeighborhoodView
                 NavigationLink(
-                    destination: NeighbourhoodView(selectedCity: selectedCity ?? "", selectedDistrict: selectedDistrict ?? ""),
+                    destination: NeighbourhoodView(selectedCity: selectedCityName, selectedDistrict: selectedDistrict?.name, selectedDistrictID: selectedDistrict?.id),
                     isActive: $navigateToNeighborhood
                 ) {
                     EmptyView()
                 }
             }
         }
+        .onAppear {
+            if let cityID = selectedCityID {
+                viewModel.fetchDistricts(forCityID: cityID)
+            }
+        }
     }
 }
 
 #Preview {
-    SearchDistrict()
+    SearchDistrict(selectedCityName: "İstanbul", selectedCityID: 1) 
 }

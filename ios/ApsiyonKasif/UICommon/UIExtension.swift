@@ -32,6 +32,7 @@ extension Color {
     static let bgBlue = Color(red: 0x00 / 255, green: 0xA5 / 255, blue: 0xDF / 255)
     static let bg = Color(red: 0xEF / 255, green: 0xF2 / 255, blue: 0xF9 / 255)
     static let customGray = Color(red: 90 / 255, green: 107 / 255, blue: 130 / 255)
+    static let error = Color(red: 241/255, green: 22/255, blue: 108/255)
     }
 
 extension View {
@@ -139,19 +140,21 @@ struct RoundedCorner: Shape {
 }
 
 struct CustomProgressViewStyle: ProgressViewStyle {
+    var trackColor: Color
+    var progressColor: Color
+
     func makeBody(configuration: Configuration) -> some View {
-        ZStack {
-            // Alt katman (örneğin gri)
-            RoundedRectangle(cornerRadius: 6.5)
-                .fill(Color.customWhite)
+        ZStack(alignment: .leading) {
+            RoundedRectangle(cornerRadius: 6)
+                .fill(trackColor)
                 .frame(height: 13)
-            
-            // Üst katman (örneğin mavi)
-            RoundedRectangle(cornerRadius: 6.5)
-                .fill(Color.blue)
+                
+
+            RoundedRectangle(cornerRadius: 6)
+                .fill(progressColor)
+                .padding(.all, 3)
                 .frame(width: CGFloat(configuration.fractionCompleted ?? 0) * 333, height: 13)
-                .animation(.linear)
         }
-        .frame(width: 333, height: 13)
     }
 }
+

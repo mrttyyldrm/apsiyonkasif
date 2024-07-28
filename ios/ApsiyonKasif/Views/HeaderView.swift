@@ -14,11 +14,11 @@ struct HeaderView: View {
         ZStack {
             VStack {
                 HStack {
-                    NavigationLink(destination: WelcomeView()) {
+                    NavigationLink(destination: GuideView()) {
                         Image(systemName: "chevron.left.circle")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 28, height: 28)
+                            .frame(width: 25, height: 23)
                             .foregroundColor(.customWhite)
                             .padding(.leading, 15)
                     }
@@ -50,7 +50,6 @@ struct HeaderView: View {
         .navHideWithout
         .background(Color.bg)
         .navigationBarHidden(true)
-        .padding(.top, 50)
     }
 }
 

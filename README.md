@@ -43,3 +43,13 @@ teknolojileri kullanılarak geliştirilmiştir.
 
 #### Bağlantı Adresi: https://apsiyonkasif.mlsadpu.com
 
+#### Test Kullanıcısı 1: 
+E Posta: test@apsiyon.com
+
+Parola: Apsiyon123.
+
+#### Test Kullanıcısı 2:
+E Posta: mrttyyldrm@gmail.com
+
+Parola: Password123.
+

@@ -2,6 +2,7 @@
 @import "@/styles/color.scss";
 
 %card {
+    flex-shrink: 0;
     cursor: pointer;
     overflow: hidden;
     width: 100%;

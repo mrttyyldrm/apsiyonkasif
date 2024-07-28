@@ -38,7 +38,7 @@ function Create() {
   const [step, setStep] = useState({
     count: 1,
     ratio: "50%",
-    information: "Aramak istediğin ilan türü ile başlayalım.",
+    information: "Öncelikle yayınlamak istediğin daireyi seçmelisin.",
   });
 
   const handleIsLogged = async () => {

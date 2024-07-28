@@ -75,6 +75,8 @@ main {
         }
 
         #create-form {
+            overflow: hidden;
+            height: 100%;
             display: grid;
             grid-template-rows: 1fr auto;
             gap: 3rem;

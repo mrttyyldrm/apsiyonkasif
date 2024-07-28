@@ -56,7 +56,7 @@ function Login() {
             placeholder="E Posta Giriniz"
             type="email"
             value={datas.email}
-            onChangeEventHandler={(e) =>
+            onChangeHandler={(e) =>
               setDatas({ email: e.target.value, password: datas.password })
             }
           />
@@ -65,7 +65,7 @@ function Login() {
             placeholder="Parola Giriniz"
             type="password"
             value={datas.password}
-            onChangeEventHandler={(e) =>
+            onChangeHandler={(e) =>
               setDatas({ email: datas.email, password: e.target.value })
             }
           />

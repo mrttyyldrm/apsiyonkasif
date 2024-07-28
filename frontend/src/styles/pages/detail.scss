@@ -1,5 +1,5 @@
 @use "@/styles/components/bar";
-@use "@/styles/components/control";
+@use "@/styles/components/select";
 @use "@/styles/components/information";
 @use "@/styles/components/button";
 @use "@/styles/components/text";
@@ -452,6 +452,32 @@ main {
                             color: $black;
                         }
 
+                    }
+                }
+            }
+
+            article#detail-reservation {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                padding: 2rem;
+
+                h3 {
+                    padding: 0;
+                }
+
+
+                #reservation-controls {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.5rem;
+
+                    .select {
+                        @extend %select;
+
+                        .select-input {
+                            border-radius: 0.1rem solid $greySoft;
+                        }
                     }
                 }
             }

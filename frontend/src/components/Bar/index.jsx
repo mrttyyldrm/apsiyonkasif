@@ -11,7 +11,7 @@ function Bar() {
   return (
     <>
       <div id="bar-return" onClick={returnGuide}>
-        <i className="fa-light fa-circle-chevron-left"></i>
+        <i className="fa-regular fa-circle-chevron-left"></i>
       </div>
       <div id="bar-logo">
         <img src="/logo-light.svg" />

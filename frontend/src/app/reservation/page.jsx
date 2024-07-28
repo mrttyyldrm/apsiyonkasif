@@ -8,10 +8,11 @@ import Card from "@/components/Card";
 import Error from "@/components/Error";
 import Bar from "@/components/Bar";
 import { IsLogged, GetReservation } from "@/api";
+import { useRouter } from "next/navigation";
 
 function Reservation() {
+  const router = useRouter();
   const [cards, setCards] = useState([]);
-  const [filteredCards, setFilteredCards] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState({
     situation: false,
@@ -44,6 +45,10 @@ function Reservation() {
     handleGetReservation();
   }, []);
 
+  const redirectDetails = (id) => {
+    router.push(`/detail?id=${id}`);
+  };
+
   return (
     <>
       {error.situation && <Error text={error.text} />}
@@ -55,13 +60,20 @@ function Reservation() {
             <Bar />
           </div>
           <div id="reservation-content">
-            {cards.map((card, index) => (
-              <Card
-                key={index}
-                card={card}
-                onClickHandler={() => redirectDetails(card.id)}
-              ></Card>
-            ))}
+            {cards.length === 0 ? (
+              <div id="reservation-empty">
+                <i className="fa-light fa-circle-question"></i>
+                <p>Rezervasyon Bulunamadı</p>
+              </div>
+            ) : (
+              cards.map((card, index) => (
+                <Card
+                  key={index}
+                  card={card}
+                  onClickHandler={() => redirectDetails(card.id)}
+                ></Card>
+              ))
+            )}
           </div>
           <div id="reservation-information">
             <Information text="Mevcut ilanlarınız üzerinden rezervasyonlarınızı listeledim!" />

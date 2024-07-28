@@ -47,13 +47,18 @@ function Card(props) {
       )}
       {appointmentList !== undefined && (
         <ul className="card-reservations">
-          {appointmentList.map((reservation, index) => (
-            <li className="reservation" key={index}>
-              <p>{reservation.date}</p>
-              <p>{reservation.hours}</p>
-              <h4>{reservation.fullName}</h4>
-            </li>
-          ))}
+          {appointmentList.map((reservation, index) => {
+            const [year, month, day] = reservation.date.split("-");
+            const formattedDate = `${day}/${month}/${year}`;
+
+            return (
+              <li className="reservation" key={index}>
+                <p>{formattedDate}</p>
+                <p>{reservation.hours.slice(0, -3)}</p>
+                <h4>{reservation.fullName}</h4>
+              </li>
+            );
+          })}
         </ul>
       )}
     </div>

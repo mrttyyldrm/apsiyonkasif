@@ -144,6 +144,7 @@ main {
                         gap: 1.5rem;
 
                         #filters-overlay {
+                            z-index: 5;
                             position: absolute;
                             top: 0;
                             left: 0;

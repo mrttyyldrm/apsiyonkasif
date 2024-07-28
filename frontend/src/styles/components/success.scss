@@ -1,0 +1,53 @@
+@use "@/styles/components/text";
+@import "@/styles/color.scss";
+
+section#success {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 105;
+    width: 100%;
+    height: 100%;
+    background-color: $success;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    #success-icon {
+        width: 15rem;
+        height: 15rem;
+        border-radius: 50%;
+        border: 0.5rem solid $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        i {
+            font-size: 6rem;
+            color: $white;
+        }
+    }
+
+    #success-title {
+        max-width: 30rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+
+        h3 {
+            font-size: 2.3rem;
+            font-weight: 700;
+            color: $white;
+            text-align: center;
+        }
+
+        p {
+            @extend %text;
+            color: $white;
+        }
+    }
+}

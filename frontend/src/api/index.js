@@ -101,7 +101,34 @@ export const GetAdDetail = async (id) => {
     }
 };
 
-export const GetReservation = async (id) => {
+export const GetHomes = async () => {
+    try {
+        const response = await API.get("/Home/OwnerHomeList", {
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem("token")
+            },
+        });
+        return response.data;
+    } catch (error) {
+        throw error.response.data;
+    }
+};
+
+export const CreateAd = async (params) => {
+    try {
+        const response = await API.post("/Advert/CreateAdvert", JSON.stringify(params), {
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer " + localStorage.getItem("token")
+            },
+        });
+        return response.data;
+    } catch (error) {
+        throw error;
+    }
+};
+
+export const GetReservation = async () => {
     try {
         const response = await API.get("/Appointment/AdvertWithAppointments", {
             headers: {

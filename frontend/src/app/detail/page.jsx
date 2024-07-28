@@ -132,7 +132,7 @@ function Detail() {
               <h3>Fatura Bilgileri</h3>
               <ul id="invoices-list">
                 {details.billing.invoices.map((invoice, index) => (
-                  <li className="invoice">
+                  <li className="invoice" key={index}>
                     <div className="invoice-icon">
                       <i className={`fa-solid ${invoice.icon}`}></i>
                     </div>

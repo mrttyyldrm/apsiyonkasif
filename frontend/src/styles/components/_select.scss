@@ -1,7 +1,7 @@
 @use "@/styles/components/text";
 @import "@/styles/color.scss";
 
-%control {
+%select {
     position: relative;
     width: 100%;
     display: flex;
@@ -14,7 +14,7 @@
         color: $black;
     }
 
-    .control-input {
+    .select-input {
         width: 100%;
         padding: 1.5rem 2rem;
         border-radius: 1rem;
@@ -40,27 +40,12 @@
         i {
             flex-shrink: 0;
             cursor: pointer;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: $black;
-
-            &.fa-magnifying-glass {
-                color: $primary;
-            }
-
-            &.fa-angle-down {
-                font-size: 1.3rem;
-            }
-        }
-
-        p {
-            flex-shrink: 0;
-            font-size: 1.5rem;
-            font-weight: 500;
-            color: $grey;
         }
     }
 
-    .control-options {
+    .select-options {
         position: absolute;
         top: 9rem;
         left: 0;

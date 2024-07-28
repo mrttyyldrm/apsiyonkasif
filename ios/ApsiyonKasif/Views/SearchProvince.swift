@@ -8,15 +8,13 @@
 import SwiftUI
 
 struct SearchProvince: View {
-    
-    @State private var selectedCity: String? = nil
+    @StateObject private var viewModel = CityViewModel()
+    @State private var selectedCity: City? = nil
     @State private var navigateToDistrict = false
-    
-    let cities = ["İstanbul", "Kütahya", "Eskişehir", "Bursa", "İzmir", "Ankara", "Sakarya", "Çanakkale"]
     
     var body: some View {
         NavigationStack {
-            ZStack{
+            ZStack {
                 Color.bg
                     .ignoresSafeArea()
                 
@@ -31,32 +29,42 @@ struct SearchProvince: View {
                         .padding(.top, 120)
                         .foregroundColor(.titleBlue)
                     
-                    ScrollView {
-                        VStack(spacing: 20) {
-                            ForEach(cities, id: \.self) { city in
-                                Button(action: {
-                                    selectedCity = city
-                                    navigateToDistrict = true
-                                }) {
-                                    Text(city)
-                                        .font(.customFont(.extraBold, fontSize: 16))
-                                        .maxLeft
-                                        .padding(20)
-                                        .background(selectedCity == city ? Color.bgBlue : Color.customWhite)
-                                        .foregroundColor(selectedCity == city ? .customWhite : .titleBlue)
-                                        .cornerRadius(10)
+                    if viewModel.isLoading {
+                        ProgressView()
+                            .padding(.top, 20)
+                    } else if let errorMessage = viewModel.errorMessage {
+                        Text("Error: \(errorMessage)")
+                            .foregroundColor(.red)
+                            .padding(.top, 20)
+                    } else {
+                        ScrollView {
+                            VStack(spacing: 20) {
+                                ForEach(viewModel.cities, id: \.id) { city in
+                                    Button(action: {
+                                        selectedCity = city
+                                        
+                                        UserDefaults.standard.set(city.id, forKey: "cityId")
+                                        navigateToDistrict = true
+                                    }) {
+                                        Text(city.name)
+                                            .font(.customFont(.extraBold, fontSize: 16))
+                                            .maxLeft
+                                            .padding(20)
+                                            .background(selectedCity?.id == city.id ? Color.bgBlue : Color.customWhite)
+                                            .foregroundColor(selectedCity?.id == city.id ? .customWhite : .titleBlue)
+                                            .cornerRadius(10)
+                                    }
+                                    .buttonStyle(PlainButtonStyle())
                                 }
-                                .buttonStyle(PlainButtonStyle())
                             }
+                            .padding(.horizontal, 30)
                         }
-                        .padding(.horizontal, 30)
                     }
                     
                     Spacer()
                     
                     NavigationLink(
-                        destination: SearchDistrict(selectedCity: selectedCity)
-                            .navigationBarBackButtonHidden(true),
+                        destination: SearchDistrict(selectedCityName: selectedCity?.name, selectedCityID: selectedCity?.id),
                         isActive: $navigateToDistrict
                     ) {
                         EmptyView()
@@ -64,6 +72,9 @@ struct SearchProvince: View {
                 }
             }
             .navigationBarHidden(true)
+            .onAppear {
+                viewModel.fetchCities() 
+            }
         }
     }
 }

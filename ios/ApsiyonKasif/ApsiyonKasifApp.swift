@@ -9,11 +9,12 @@ import SwiftUI
 
 @main
 struct ApsiyonKasifApp: App {
+    
     var body: some Scene {
         WindowGroup {
-            NavigationView{
+            NavigationView {
                 WelcomeView()
-                    .onAppear{
+                    .onAppear {
                         UIApplication.shared.windows.first?.overrideUserInterfaceStyle = .light
                     }
             }
@@ -21,3 +22,5 @@ struct ApsiyonKasifApp: App {
         }
     }
 }
+
+

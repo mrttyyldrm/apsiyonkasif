@@ -10,10 +10,12 @@ import SwiftUI
 struct NeighbourhoodView: View {
     var selectedCity: String?
     var selectedDistrict: String?
+    var selectedDistrictID: Int? 
+    
     @State private var selectedNeighbourhood: String? = nil
     @State private var navigateToFilters = false
     
-    let neighbourhoods = ["Yunusemre", "Bahçelievler", "Meydan", "Gaybiefendi", "Dumlupınar", "Fatih", "Zafertepe"]
+    @StateObject private var viewModel = NeighbourhoodViewModel()
     
     var body: some View {
         NavigationStack {
@@ -36,16 +38,16 @@ struct NeighbourhoodView: View {
                         Text(selectedCity ?? "")
                             .font(.customFont(.extraBold, fontSize: 16))
                             .foregroundColor(.bgBlue)
-                            .maxLeft
+                            .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(20)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color.btnBlue, lineWidth: 5) // Adjust color and thickness here
+                                    .stroke(Color.btnBlue, lineWidth: 5)
                             )
                             .cornerRadius(10)
                             .background(
                                 Color.bgBlue
-                                    .opacity(0.1) // Set your desired opacity here
+                                    .opacity(0.1)
                                     .cornerRadius(10)
                             )
                             .padding(.bottom, 10)
@@ -53,41 +55,52 @@ struct NeighbourhoodView: View {
                         Text(selectedDistrict ?? "")
                             .font(.customFont(.extraBold, fontSize: 16))
                             .foregroundColor(.bgBlue)
-                            .maxLeft
+                            .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(20)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color.btnBlue, lineWidth: 5) // Adjust color and thickness here
+                                    .stroke(Color.btnBlue, lineWidth: 5)
                             )
                             .cornerRadius(10)
                             .background(
                                 Color.bgBlue
-                                    .opacity(0.1) // Set your desired opacity here
+                                    .opacity(0.1)
                                     .cornerRadius(10)
                             )
-                            .padding(.bottom, 30)
+                            .padding(.bottom, 20)
                     }
                     .padding(.horizontal, 30)
                     
-                    ScrollView {
-                        VStack(spacing: 20) {
-                            ForEach(neighbourhoods, id: \.self) { neighbourhood in
-                                Button(action: {
-                                    selectedNeighbourhood = neighbourhood
-                                    navigateToFilters = true
-                                }) {
-                                    Text(neighbourhood)
-                                        .font(.customFont(.extraBold, fontSize: 16))
-                                        .maxLeft
-                                        .padding(20)
-                                        .background(selectedNeighbourhood == neighbourhood ? Color.bgBlue : Color.customWhite)
-                                        .foregroundColor(selectedNeighbourhood == neighbourhood ? .customWhite : .titleBlue)
-                                        .cornerRadius(10)
+                    if viewModel.isLoading {
+                        ProgressView()
+                            .padding(.top, 20)
+                    } else if let errorMessage = viewModel.errorMessage {
+                        Text("Error: \(errorMessage)")
+                            .foregroundColor(.red)
+                            .padding(.top, 20)
+                    } else {
+                        ScrollView {
+                            VStack(spacing: 20) {
+                                ForEach(viewModel.neighbourhoods) { neighbourhood in
+                                    Button(action: {
+                                        selectedNeighbourhood = neighbourhood.name
+                                       
+                                        UserDefaults.standard.set(neighbourhood.id, forKey: "neighbourhoodId")
+                                        navigateToFilters = true
+                                    }) {
+                                        Text(neighbourhood.name)
+                                            .font(.customFont(.extraBold, fontSize: 16))
+                                            .frame(maxWidth: .infinity, alignment: .leading)
+                                            .padding(20)
+                                            .background(selectedNeighbourhood == neighbourhood.name ? Color.bgBlue : Color.customWhite)
+                                            .foregroundColor(selectedNeighbourhood == neighbourhood.name ? .customWhite : .titleBlue)
+                                            .cornerRadius(10)
+                                    }
+                                    .buttonStyle(PlainButtonStyle())
                                 }
-                                .buttonStyle(PlainButtonStyle())
                             }
+                            .padding(.horizontal, 30)
                         }
-                        .padding(.horizontal, 30)
                     }
                     
                     Spacer()
@@ -102,8 +115,14 @@ struct NeighbourhoodView: View {
                 .hidden()
             )
         }
+        .onAppear {
+            if let districtID = selectedDistrictID {
+                viewModel.fetchNeighbourhoods(forCountyID: districtID)
+            }
+        }
     }
 }
+
 #Preview {
-    NeighbourhoodView()
+    NeighbourhoodView(selectedCity: "İstanbul", selectedDistrict: "Kadıköy", selectedDistrictID: 1)
 }

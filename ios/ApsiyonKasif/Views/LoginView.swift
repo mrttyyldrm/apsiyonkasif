@@ -23,17 +23,19 @@ struct LoginView: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: 65, height: 65)
+                            .padding(.trailing, 10)
                         
                         Spacer()
                         
                         Text("Öncelikle Apsiyon hesabına \n giriş yapalım!")
                             .font(.customFont(.semiBold, fontSize: 14))
+                            .padding(.leading, -30)
                             .frame(width: 253, height: 65)
                             .foregroundColor(.customWhite)
                             .background(Color.bgBlue)
                             .cornerRadius(10, corner: [.bottomRight, .topLeft, .topRight])
                     }
-                    .safeAreaPadding()
+                    
                     Spacer()
                     
                     VStack {
@@ -53,13 +55,13 @@ struct LoginView: View {
                     .padding(.bottom, 50)
                     
                     VStack {
-                        // E-Mail TextField
-                        Text("E-Mail")
+                        
+                        Text("E-Posta")
                             .font(.customFont(.bold, fontSize: 14))
                             .foregroundColor(Color.titleBlue)
                             .frame(maxWidth: .infinity, alignment: .leading)
                         
-                        TextField("E-Mail giriniz", text: $email)
+                        TextField("E-Posta giriniz", text: $email)
                             .font(.customFont(.medium, fontSize: 16))
                             .keyboardType(.emailAddress)
                             .padding(20)
@@ -69,7 +71,7 @@ struct LoginView: View {
                             .cornerRadius(10)
                             .padding(.bottom, 20)
                         
-                        // Password TextField
+                        
                         Text("Parola")
                             .font(.customFont(.bold, fontSize: 14))
                             .foregroundColor(Color.titleBlue)

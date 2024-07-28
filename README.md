@@ -36,7 +36,7 @@ teknolojileri kullanılarak geliştirilmiştir.
 ![Apsiyon Kaşif Dark App Design](https://github.com/user-attachments/assets/0e190528-2001-4354-892b-758dc66de616)
 
 ## Veritabanı Diyagramı
-![ApsiyonKasifDiagram drawio](https://github.com/user-attachments/assets/25ee6101-af5e-4d43-89bb-235f1408a322)
+![ApsiyonKasifDiyagram drawio](https://github.com/user-attachments/assets/6f3e9c37-a587-4592-afea-9e2f8bc3d0c2)
 
 # Canlı Deneyin
 ![qr-code (9) 1](https://github.com/user-attachments/assets/2b8b5094-4e98-442a-8386-eee54f04dcc8)

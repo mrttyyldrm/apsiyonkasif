@@ -101,6 +101,33 @@ export const GetAdDetail = async (id) => {
     }
 };
 
+export const GetAppointmentHours = async (date) => {
+    try {
+        const response = await API.get(`/Appointment/GetAppointmentsByDate?date=${date}`, {
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem("token")
+            },
+        });
+        return response.data;
+    } catch (error) {
+        throw error.response.data;
+    }
+};
+
+export const CreateReservation = async (params) => {
+    try {
+        const response = await API.post("/Appointment/CreateAppointmentByHours", JSON.stringify(params), {
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer " + localStorage.getItem("token")
+            },
+        });
+        return response.data;
+    } catch (error) {
+        throw error.response.data;
+    }
+};
+
 export const GetHomes = async () => {
     try {
         const response = await API.get("/Home/OwnerHomeList", {

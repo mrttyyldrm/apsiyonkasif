@@ -1,24 +1,46 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "@/styles/pages/detail.scss";
 import Loading from "@/components/Loading";
 import Button from "@/components/Button";
+import Select from "@/components/Select";
 import Error from "@/components/Error";
+import Success from "@/components/Success";
 import Information from "@/components/Information";
 import Bar from "@/components/Bar";
-import { IsLogged, GetAdDetail } from "@/api";
+import {
+  IsLogged,
+  GetAdDetail,
+  GetAppointmentHours,
+  CreateReservation,
+} from "@/api";
 import { useRouter } from "next/navigation";
 
 function Detail() {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(true);
+  const [reservationLoading, setReservationLoading] = useState(false);
   const [isVirtual, setIsVirtual] = useState(false);
   const [details, setDetails] = useState();
   const [error, setError] = useState({
     situation: false,
     text: null,
   });
+  const [success, setSuccess] = useState({
+    situation: false,
+    title: null,
+  });
+  const [hours, setHours] = useState({
+    situation: false,
+    values: [],
+  });
+  const [params, setParams] = useState({
+    date: null,
+    hour: null,
+  });
+
+  const reservationRef = useRef(null);
 
   const handleIsLogged = async () => {
     try {
@@ -41,6 +63,54 @@ function Detail() {
     }
   };
 
+  const handleGetAppointmentHours = async (id) => {
+    try {
+      const data = await GetAppointmentHours(id);
+      setHours({
+        situation: true,
+        values: data,
+      });
+    } catch (error) {
+      setError({
+        situation: true,
+        text: "Randevu saati listeleme sürecinde bir hata oldu. Lütfen daha sonra tekrar deneyiniz.",
+      });
+    }
+  };
+
+  const selectDate = (id) => {
+    setParams((previous) => ({
+      ...previous,
+      date: id,
+    }));
+    setHours({ situation: false, values: [] });
+    handleGetAppointmentHours(id);
+  };
+
+  const handleCreateReservation = async () => {
+    try {
+      setReservationLoading(true);
+      await CreateReservation(params);
+      setSuccess({
+        situation: true,
+        title: "Randevu Talebiniz Oluşturuldu!",
+      });
+    } catch (error) {
+      setError({
+        situation: true,
+        text: "Randevu oluşturma sürecinde bir hata oldu. Lütfen daha sonra tekrar deneyiniz.",
+      });
+    }
+  };
+
+  const createReservation = () => {
+    if (params.date !== null && params.hour !== null) {
+      handleCreateReservation();
+    } else {
+      reservationRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   useEffect(() => {
     handleIsLogged();
     handleGetAdDetail(window.location.href.split("id=")[1]);
@@ -49,6 +119,7 @@ function Detail() {
   return (
     <>
       {error.situation && <Error text={error.text} />}
+      {success.situation && <Success title={success.title} />}
       {isVirtual && (
         <section id="virtual">
           <div id="virtual-return" onClick={() => setIsVirtual(false)}>
@@ -189,10 +260,40 @@ function Detail() {
                 </div>
               </div>
             </article>
+            {!details.owner.isOwner && (
+              <article id="detail-reservation">
+                <h3>Randevu Talebi</h3>
+                <div id="reservation-controls" ref={reservationRef}>
+                  <Select
+                    onSelectHandler={(id) => selectDate(id)}
+                    placeholder="Tarih Seçiniz"
+                    options={details.appointments}
+                  />
+                  {hours.situation && (
+                    <Select
+                      onSelectHandler={(id) =>
+                        setParams((previous) => ({
+                          ...previous,
+                          hour: id,
+                        }))
+                      }
+                      placeholder="Saat Seçiniz"
+                      options={hours.values}
+                    />
+                  )}
+                </div>
+              </article>
+            )}
           </div>
-          <div id="detail-button">
-            <Button text="Randevu Al" />
-          </div>
+          {!details.owner.isOwner && (
+            <div id="detail-button">
+              <Button
+                text="Randevu Al"
+                onClickHandler={createReservation}
+                isLoading={reservationLoading}
+              />
+            </div>
+          )}
         </section>
       )}
     </>

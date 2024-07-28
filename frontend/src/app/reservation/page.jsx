@@ -53,7 +53,7 @@ function Reservation() {
     <>
       {error.situation && <Error text={error.text} />}
       {isLoading ? (
-        <Loading title="Rezervasyonlarınızı listeliyorum." />
+        <Loading title="Randevularınızı listeliyorum." />
       ) : (
         <section id="reservation">
           <div id="reservation-bar">
@@ -63,7 +63,7 @@ function Reservation() {
             {cards.length === 0 ? (
               <div id="reservation-empty">
                 <i className="fa-light fa-circle-question"></i>
-                <p>Rezervasyon Bulunamadı</p>
+                <p>Randevu Bulunamadı</p>
               </div>
             ) : (
               cards.map((card, index) => (
@@ -76,7 +76,7 @@ function Reservation() {
             )}
           </div>
           <div id="reservation-information">
-            <Information text="Mevcut ilanlarınız üzerinden rezervasyonlarınızı listeledim!" />
+            <Information text="Mevcut ilanlarınız üzerinden randevularınızı listeledim!" />
           </div>
         </section>
       )}

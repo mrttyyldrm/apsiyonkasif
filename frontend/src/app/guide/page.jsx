@@ -94,14 +94,11 @@ function Guide() {
         ></Button>
         <Button
           isActive={isActives[2]}
-          text="Rezervasyonlarımı görmek istiyorum."
+          text="Randevularımı görmek istiyorum."
           onClickHandler={() => {
             if (!isSelected) {
               setIsActives([false, false, true]);
-              selectOption(
-                "reservation",
-                "Rezervasyonlarımı görmek istiyorum."
-              );
+              selectOption("reservation", "Randevularımı görmek istiyorum.");
             }
           }}
         ></Button>
